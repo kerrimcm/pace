@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SaferRoutes</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pace</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
-
+  <br>
+  <% if !user_signed_in? %>
+    <p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
+  <% end %>
+  <% if user_signed_in? %>
+    <div class="buttons">
+      
+      <button class="button"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
+    </div>
+  <% end %>
+  <%= link_to "Home", root_path %>
+  
+  
+    <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <body>
     <%= yield %>
   </body>
