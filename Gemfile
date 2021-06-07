@@ -58,3 +58,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production, :development, :test do
   gem 'pg', '1.2.3'
 end
+
+gem 'devise', '~> 4.8'
