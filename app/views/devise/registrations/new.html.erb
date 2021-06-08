@@ -29,6 +29,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :goals, "Fitness Goals" %><br />
+    <%= f.select :goals, ['Distance', 'Speed', 'A bit of both']%> 
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
