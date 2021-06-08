@@ -11,6 +11,6 @@ feature "Edit button" do
     click_button "Sign up"
     click_button "Show"
     expect(page).to have_content "test@test.com"
-    expect(page).to have_button "Edit"
+    expect(page).to have_link "Edit"
   end
 end 
