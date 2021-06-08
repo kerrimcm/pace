@@ -7,7 +7,7 @@ feature 'Sign up' do
     click_link "Sign up"
     fill_in "First name", with: "Jane"
     fill_in "Postcode", with: "SW1"
-    fill_in "DOB", with: "20/04/2000"
+    fill_in "Date of birth", with: "2021-06-01"
     fill_in "Gender", with: "Female"
     fill_in "Running ability", with: "Basic" 
     fill_in "Fitness Goals", with: "Intermediate"

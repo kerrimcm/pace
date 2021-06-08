@@ -9,8 +9,18 @@
   </div>
 
   <div class="field">
-    <%= f.label :postcode %><br />
+    <%= f.label :postcode, "Postcode" %><br />
     <%= f.text_field :postcode, autofocus: true, autocomplete: "postcode" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob, "Date of birth"%><br />
+    <%= f.date_field :dob, autofocus: true, autocomplete: "date-of-birth" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender, "Gender" %><br />
+    <%= f.select :gender, ['Female', 'Male', 'Non-Binary', 'Prefer not to say']%> 
   </div>
 
   <div class="field">
