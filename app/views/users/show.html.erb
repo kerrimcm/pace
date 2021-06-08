@@ -1,5 +1,7 @@
 <p>
 <strong>Email:</strong>
 <%= @user.email %>
-<%= link_to "Edit", edit_user_registration_path %>
+<% if current_user.id == @user.id %>
+  <%= link_to "Edit", edit_user_registration_path %>
+<% end %>
 </p>
