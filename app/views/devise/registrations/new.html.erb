@@ -4,6 +4,36 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "first-name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :postcode, "Postcode" %><br />
+    <%= f.text_field :postcode, autofocus: true, autocomplete: "postcode" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob, "Date of birth"%><br />
+    <%= f.date_field :dob, autofocus: true, autocomplete: "date-of-birth" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender, "Gender" %><br />
+    <%= f.select :gender, ['Female', 'Male', 'Non-Binary', 'Prefer not to say']%> 
+  </div>
+
+  <div class="field">
+    <%= f.label :ability, "Running ability" %><br />
+    <%= f.select :ability, ['Couch', 'Local Park', 'Marathon']%> 
+  </div>
+
+  <div class="field">
+    <%= f.label :goals, "Fitness Goals" %><br />
+    <%= f.select :goals, ['Distance', 'Speed', 'A bit of both']%> 
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
