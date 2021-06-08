@@ -13,8 +13,8 @@ feature 'Sign up' do
     select('Speed', from: 'Fitness Goals')
     fill_in "Email", with: "jdoe@email.com"
     fill_in "Password", with: "password"
-    fill_in "Password Confirmation", with: "password"
-    click_button "Create Account"
+    fill_in "Password confirmation", with: "password"
+    click_button "Sign up"
     expect(page).to have_content "Welcome! You have signed up successfully."
   end
 end
