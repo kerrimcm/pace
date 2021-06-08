@@ -24,6 +24,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :ability, "Running ability" %><br />
+    <%= f.select :ability, ['Couch', 'Local Park', 'Marathon']%> 
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
