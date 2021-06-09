@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .header-container {
+.header-container {
     width: 1000px;
     margin: auto;
     margin-top: 50px;
@@ -49,6 +49,14 @@ nav li {
   display: inline-block;
   margin-left: 70px;
   padding-top: 35px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer {

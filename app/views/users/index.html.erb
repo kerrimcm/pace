@@ -1,27 +1,22 @@
 <%= stylesheet_link_tag "home_page", :media => "screen" %>
 
 <div class="background">
-<div class="main-body">
-  
-<% if user_signed_in? %>
-
-  <% @users.each do |user| %>
-    <div class="user-container">
-    <h3><%= user.first_name %></h3>
-    <br>
-    <p><%= user.postcode %></p>
-    <br>
-    <p><%= user.gender %></p>
-    <br>
-    <p><%= user.ability %></p>
-    <br>
-    <p><%= user.goals %></p>
-  
-    <%= button_to 'Show', user %>
+  <div class="main-body">
+  <% if user_signed_in? %>
+    <% @users.each do |user| %>
+      <div class="user-container">
+        <h3><%= user.first_name %></h3>
+        <br>
+        <p><%= user.postcode %></p>
+        <br>
+        <p><%= user.gender %></p>
+        <br>
+        <p><%= user.ability %></p>
+        <br>
+        <p><%= user.goals %></p>
+        <%= button_to 'View user', user %>
     </div>
   <% end %>
- 
-<% end %>
- 
-</div>
+ <% end %>
+ </div>
 </div>
