@@ -14,41 +14,12 @@ feature 'profile picture' do
     fill_in "Email", with: "jdoe@email.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
-
-
     attach_file('user[profile_pic]',
-                File.join(Rails.root, '/spec/fixtures/default.jpg'), :visible => false)
+                File.join(Rails.root, '/spec/fixtures/miss_piggy.jpg'), :visible => false)
     # click_on('btn-upload-img')
-
-
     click_button "Sign up"
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_content "Welcome! You have signed up successfully."
+    expect(page).to have_xpath("//img[contains(@src,'miss_piggy.jpg')]")
   end
 end
-
-#
-# describe 'Images', type: :feature do
-#   before(:each) do
-#     @user = create(:user)
-#     visit '/users/sign_in'
-#     fill_in 'sing-in-email-input', with: @user.email
-#     fill_in 'sign-in-password-input', with: @user.password
-#     click_button 'btn-sign-in'
-#     visit '/categories'
-#     click_on 'btn-new-category'
-#     expect(current_path) == new_category_path
-#     fill_in 'category_name', with: 'Test'
-#     click_button 'btn-create category'
-#     visit '/categories'
-#     first('.fa', :visible => false).click
-#     expect(current_path) == category_path(id: Category.last.slug.to_s)
-#   end
-#   it 'should allow a registered user to create image and go to it page', js: true do
-#     click_on 'btn-upload-images'
-#     expect(current_path) == new_image_path(id: Category.last.slug.to_s)
-#     attach_file('image[image]',
-#                 File.join(Rails.root, '/spec/fixtures/solnce-kosmos-merkuriy.jpg'), :visible => false)
-#     click_on('btn-upload-img')
-#   end
-# end

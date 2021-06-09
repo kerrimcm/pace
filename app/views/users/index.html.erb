@@ -2,6 +2,12 @@
 
 <h1>Pace</h1>
 <% @users.each do |user| %>
+  <% if user.profile_pic.attached? %>
+    <% image = user.profile_pic %>
+  <% else %>
+    <% image = 'default.jpg' %>
+  <% end %>
+  <%= image_tag(image, class: "profile_pic") %> <br />
   <p><%= user.email %></p>
   <%= button_to 'Show', user %>
 <% end %>
