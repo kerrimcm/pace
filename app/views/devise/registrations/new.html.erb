@@ -20,17 +20,22 @@
 
   <div class="field">
     <%= f.label :gender, "Gender" %><br />
-    <%= f.select :gender, ['Female', 'Male', 'Non-Binary', 'Prefer not to say']%> 
+    <%= f.select :gender, ['Female', 'Male', 'Non-Binary', 'Prefer not to say']%>
   </div>
 
   <div class="field">
     <%= f.label :ability, "Running ability" %><br />
-    <%= f.select :ability, ['Couch', 'Local Park', 'Marathon']%> 
+    <%= f.select :ability, ['Couch', 'Local Park', 'Marathon']%>
   </div>
 
   <div class="field">
     <%= f.label :goals, "Fitness Goals" %><br />
-    <%= f.select :goals, ['Distance', 'Speed', 'A bit of both']%> 
+    <%= f.select :goals, ['Distance', 'Speed', 'A bit of both']%>
+  </div>
+
+  <div class="field">
+    <%= f.label :profile_pic, "Profile picture" %><br />
+    <%= f.file_field :profile_pic %>
   </div>
 
   <div class="field">
