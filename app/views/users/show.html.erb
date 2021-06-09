@@ -1,7 +1,14 @@
 <p>
-<strong>Email:</strong>
-<%= @user.email %>
+<strong>User information:</strong>
+<p><%= @user.first_name %></p>
+<p><%= @user.postcode %></p>
+<p><%= @user.gender %></p>
+<p><%= @user.ability %></p>
+<p><%= @user.goals %></p>
+
+<br>
 <% if current_user.id == @user.id %>
+  <p><%= @user.email %></p>
   <%= link_to "Edit", edit_user_registration_path %>
 <% end %>
 </p>

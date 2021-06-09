@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature "Profile page show" do
-  scenario "Users can view other users profiles" do
+feature "Home page user info spec" do
+  scenario "User signs up and sees their info" do
     visit "/"
     click_link "Sign up"
     fill_in "First name", with: "Jane"
@@ -14,12 +14,10 @@ feature "Profile page show" do
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Sign up"
-    click_button "Show"
     expect(page).to have_content "Jane"
     expect(page).to have_content "SW1"
     expect(page).to have_content "Female"
     expect(page).to have_content "Couch"
     expect(page).to have_content "Speed"
-    expect(page).to have_content "jdoe@email.com"
   end
 end 

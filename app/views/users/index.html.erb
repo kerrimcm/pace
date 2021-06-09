@@ -2,6 +2,10 @@
 
 <h1>Pace</h1>
 <% @users.each do |user| %>
-  <p><%= user.email %></p>
+  <p><%= user.first_name %></p>
+  <p><%= user.postcode %></p>
+  <p><%= user.gender %></p>
+  <p><%= user.ability %></p>
+  <p><%= user.goals %></p>
   <%= button_to 'Show', user %>
 <% end %>
