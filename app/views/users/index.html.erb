@@ -1,11 +1,22 @@
-<%= link_to "Sign up", new_user_registration_path %>
+<%= stylesheet_link_tag "home_page", :media => "screen" %>
 
-<h1>Pace</h1>
-<% @users.each do |user| %>
-  <p><%= user.first_name %></p>
-  <p><%= user.postcode %></p>
-  <p><%= user.gender %></p>
-  <p><%= user.ability %></p>
-  <p><%= user.goals %></p>
-  <%= button_to 'Show', user %>
-<% end %>
+<div class="background">
+  <div class="main-body">
+  <% if user_signed_in? %>
+    <% @users.each do |user| %>
+      <div class="user-container">
+        <h3><%= user.first_name %></h3>
+        <br>
+        <p><%= user.postcode %></p>
+        <br>
+        <p><%= user.gender %></p>
+        <br>
+        <p><%= user.ability %></p>
+        <br>
+        <p><%= user.goals %></p>
+        <%= button_to 'View user', user %>
+    </div>
+  <% end %>
+ <% end %>
+ </div>
+</div>
