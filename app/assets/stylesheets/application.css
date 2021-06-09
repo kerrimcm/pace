@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+ .header-container {
+    width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    height: 100px;
+  }
+
+.pace-logo {
+  width: 100px;
+  float: left;
+  }
+
+header {
+  background: rgb(250, 222, 222)
+}
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 35px;
+}
+
+.footer {
+    font-family: 'Open Sans', sans-serif;
+    background-color:rgb(230, 230, 230);
+    padding: 1rem;
+    text-align: center;
+    grid-column: 1 / 4;
+  }
