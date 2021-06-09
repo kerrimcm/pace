@@ -1,6 +1,8 @@
 <p>
-<strong>Email:</strong>
-<%= @user.email %>
+
+<h3> <strong>Name:</strong> <%= @user.first_name %> </h3> <br />
+<h3> <strong>Email:</strong> <%= @user.email %> </h3> <br />
+<%= image_tag(@user.profile_pic, class: "profile_pic") %> <br />
 <% if current_user.id == @user.id %>
   <%= link_to "Edit", edit_user_registration_path %>
 <% end %>
