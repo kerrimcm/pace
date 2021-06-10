@@ -1,10 +1,19 @@
 <%= stylesheet_link_tag "home_page", :media => "screen" %>
+  <p><%= user.email %></p>
+  <%= button_to 'Show', user %>
+<% end %>
 
 <div class="background">
   <div class="main-body">
   <% if user_signed_in? %>
+    <div class="user-container">
     <% @users.each do |user| %>
-      <div class="user-container">
+    <% if user.profile_pic.attached? %>
+     <% image = user.profile_pic %>
+    <% else %>
+     <% image = 'default.jpg' %>
+    <% end %>
+  <%= image_tag(image, class: "profile_pic") %> <br />
         <h3><%= user.first_name %></h3>
         <br>
         <p><%= user.postcode %></p>
@@ -20,3 +29,4 @@
  <% end %>
  </div>
 </div>
+

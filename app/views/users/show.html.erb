@@ -1,5 +1,12 @@
-<p>
 <strong>User information:</strong>
+
+<% if @user.profile_pic.attached? %>
+  <% image = @user.profile_pic %>
+<% else %>
+  <% image = 'default.jpg' %>
+<% end %>
+<%= image_tag(image, class: "profile_pic") %> <br />
+
 <p><%= @user.first_name %></p>
 <p><%= @user.postcode %></p>
 <p><%= @user.gender %></p>
@@ -11,4 +18,3 @@
   <p><%= @user.email %></p>
   <%= link_to "Edit", edit_user_registration_path %>
 <% end %>
-</p>
