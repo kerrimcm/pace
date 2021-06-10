@@ -16,9 +16,8 @@
 
 .header-container {
     width: 1000px;
-    margin: auto;
-    margin-top: 50px;
     height: 100px;
+    margin: auto;
   }
 
 .pace-logo {
@@ -65,5 +64,4 @@ nav a {
   text-align: center;
   grid-column: 1 / 4;
   padding: 20px;
-  margin-top: 50px;
 }
