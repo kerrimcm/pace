@@ -1,0 +1,38 @@
+
+
+
+.message_sent{
+  padding: 12px 24px;
+}
+
+.message_received{
+  padding: 12px 24px;
+}
+
+.sent_bubble{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fec5bb;
+  border-radius: 8px;
+  padding: 5px 10px;
+  float: right;
+}
+
+.received_bubble{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #a8dadc;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.sent_bubble_meta{
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px;
+  padding: 1px 2px;
+  float: right;
+}
+
+.received_bubble_meta{
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
