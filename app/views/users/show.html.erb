@@ -1,5 +1,4 @@
-<strong>User information:</strong>
-
+<strong>User information:</strong> <br />
 
 <% if @user.profile_pic.attached? %>
   <% image = @user.profile_pic %>
@@ -8,11 +7,11 @@
 <% end %>
 <%= image_tag(image, class: "profile_pic") %> <br />
 
-<p><strong> name: </strong> <%= @user.first_name %></p>
-<p><strong> postcode:</strong> <%= @user.postcode %></p>
-<p><strong> gender: </strong> <%= @user.gender %></p>
-<p><strong> ability: </strong> <%= @user.ability %></p>
-<p><strong> goals: </strong> <%= @user.goals %></p>
+<p><strong> Name: </strong> <%= @user.first_name %></p>
+<p><strong> Area:</strong> <%= @user.postcode %></p>
+<p><strong> Gender: </strong> <%= @user.gender %></p>
+<p><strong> Ability: </strong> <%= @user.ability %></p>
+<p><strong> Goals: </strong> <%= @user.goals %></p>
 
 <br>
 <% if current_user.id == @user.id %>
@@ -21,5 +20,5 @@
 <% end %>
 
 <% if current_user.id != @user.id %>
-  <%= link_to "start a convo", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
+  <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
 <% end %>
