@@ -17,3 +17,22 @@ div.field{
 div.actions{
   display:table-row;
 }
+
+.main-body {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+h3{
+  font-family: 'Open Sans', sans-serif;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+}
+
+a{
+  font-family: 'Open Sans', sans-serif;
+}
