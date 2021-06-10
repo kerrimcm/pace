@@ -1,13 +1,32 @@
-<%= link_to "Sign up", new_user_registration_path %>
-
-<h1>Pace</h1>
-<% @users.each do |user| %>
-  <% if user.profile_pic.attached? %>
-    <% image = user.profile_pic %>
-  <% else %>
-    <% image = 'default.jpg' %>
-  <% end %>
-  <%= image_tag(image, class: "profile_pic") %> <br />
+<%= stylesheet_link_tag "home_page", :media => "screen" %>
   <p><%= user.email %></p>
   <%= button_to 'Show', user %>
 <% end %>
+
+<div class="background">
+  <div class="main-body">
+  <% if user_signed_in? %>
+    <div class="user-container">
+    <% @users.each do |user| %>
+    <% if user.profile_pic.attached? %>
+     <% image = user.profile_pic %>
+    <% else %>
+     <% image = 'default.jpg' %>
+    <% end %>
+  <%= image_tag(image, class: "profile_pic") %> <br />
+        <h3><%= user.first_name %></h3>
+        <br>
+        <p><%= user.postcode %></p>
+        <br>
+        <p><%= user.gender %></p>
+        <br>
+        <p><%= user.ability %></p>
+        <br>
+        <p><%= user.goals %></p>
+        <%= button_to 'View user', user %>
+    </div>
+  <% end %>
+ <% end %>
+ </div>
+</div>
+
