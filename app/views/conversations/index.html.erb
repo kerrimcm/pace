@@ -10,6 +10,7 @@
   <h3><%= link_to recipient.email, conversation_messages_path(conversation)%></h3>
  <% end %>
 <% end %>
+<% # # remove this later %>
 <h1>All Users:</h1>
 <% @users.each do |user| %>
  <% if user.id != current_user.id %><h3>
