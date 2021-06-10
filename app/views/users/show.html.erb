@@ -20,3 +20,6 @@
   <%= link_to "Edit", edit_user_registration_path %>
 <% end %>
 
+<% if current_user.id != @user.id %>
+  <%= link_to "start a convo", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
+<% end %>
