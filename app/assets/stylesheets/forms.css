@@ -1,0 +1,21 @@
+label{
+  display: table-cell;
+  text-align: right;
+  padding: 10px;
+  padding-right: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+input {
+  display: table-cell;
+  border-radius: 3px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+div.field{
+  display:table-row;
+
+}
+div.actions{
+  display:table-row;
+
+}
