@@ -7,5 +7,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :profile_pic
+  validates :first_name, :postcode, :dob, :gender, :ability, :goals, :profile_pic, presence: true
 
 end
