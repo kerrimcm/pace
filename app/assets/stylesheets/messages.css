@@ -1,0 +1,55 @@
+.message_sent {
+  padding: 12px 24px;
+}
+
+.message_received {
+  padding: 12px 24px;
+}
+
+.sent_bubble {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fec5bb;
+  border-radius: 8px;
+  padding: 5px 10px;
+  float: right;
+}
+
+.received_bubble {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #a8dadc;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.sent_bubble_meta {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px;
+  padding: 1px 2px;
+  float: right;
+}
+
+.received_bubble_meta {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+/* .input_message_form {
+  display: flex;
+  align-items: center;
+} */
+
+.message_area {
+  width: 400px;
+  height: 75px;
+  border: solid black 1px;
+  border-radius: 2px;
+  align-content: center;
+}
+
+input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
+  width: 175px;
+  background-color: #fb9685;
+}

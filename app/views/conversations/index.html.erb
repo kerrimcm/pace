@@ -1,12 +1,20 @@
-<h1>My Inbox</h1>
-<h1>All Conversations:</h1>
-<% @conversations.each do |conversation| %>
- <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
-  <% if conversation.sender_id == current_user.id %>
-   <% recipient = User.find(conversation.recipient_id) %>
-  <% else %>
-   <% recipient = User.find(conversation.sender_id) %>
+<%= stylesheet_link_tag "conversations", :media => "screen" %>
+<div class="main-body">
+
+  <h2>My conversations</h2>
+
+  <% @conversations.each do |conversation| %>
+    <div class="my-conversations">
+      <span class="conversations">
+     <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+      <% if conversation.sender_id == current_user.id %>
+       <% recipient = User.find(conversation.recipient_id) %>
+      <% else %>
+       <% recipient = User.find(conversation.sender_id) %>
+      <% end %>
+      <%= link_to recipient.first_name, conversation_messages_path(conversation)%>
+     <% end %>
+      </span>
+     </div>
   <% end %>
-  <h3><%= link_to recipient.email, conversation_messages_path(conversation)%></h3>
- <% end %>
-<% end %>
+</div>

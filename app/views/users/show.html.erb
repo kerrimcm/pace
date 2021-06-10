@@ -1,25 +1,27 @@
-<strong>User information:</strong>
+<%= stylesheet_link_tag "users", :media => "screen" %>
+<div class="main-body">
+  <div class="user-container">
+    <% if @user.profile_pic.attached? %>
+      <% image = @user.profile_pic %>
+    <% else %>
+      <% image = 'default.jpg' %>
+    <% end %>
+    <%= image_tag(image, class: "profile_pic") %> <br />
 
+    <p><strong> Name: </strong> <%= @user.first_name %></p>
+    <p><strong> Area:</strong> <%= @user.postcode %></p>
+    <p><strong> Gender: </strong> <%= @user.gender %></p>
+    <p><strong> Ability: </strong> <%= @user.ability %></p>
+    <p><strong> Goals: </strong> <%= @user.goals %></p>
 
-<% if @user.profile_pic.attached? %>
-  <% image = @user.profile_pic %>
-<% else %>
-  <% image = 'default.jpg' %>
-<% end %>
-<%= image_tag(image, class: "profile_pic") %> <br />
+    <br>
+    <% if current_user.id == @user.id %>
+      <p><%= @user.email %></p>
+      <%= link_to "Edit", edit_user_registration_path %>
+    <% end %>
 
-<p><strong> name: </strong> <%= @user.first_name %></p>
-<p><strong> postcode:</strong> <%= @user.postcode %></p>
-<p><strong> gender: </strong> <%= @user.gender %></p>
-<p><strong> ability: </strong> <%= @user.ability %></p>
-<p><strong> goals: </strong> <%= @user.goals %></p>
-
-<br>
-<% if current_user.id == @user.id %>
-  <p><%= @user.email %></p>
-  <%= link_to "Edit", edit_user_registration_path %>
-<% end %>
-
-<% if current_user.id != @user.id %>
-  <%= link_to "start a convo", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
-<% end %>
+    <% if current_user.id != @user.id %>
+      <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
+    <% end %>
+  </div>
+</div>
