@@ -1,6 +1,7 @@
 <% @messages.each do |message| %>
   <% if message.body %>
   <p>
+  <h3> <%= message.user_id == current_user %> </h3>
    <% user = User.find(message.user_id) %>
    <%= user.first_name %> <%= message.message_time.to_s[9,20] %>
    <%= message.body %>
