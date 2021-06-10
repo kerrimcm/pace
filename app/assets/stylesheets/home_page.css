@@ -20,6 +20,7 @@
   padding-right: 10%;
   padding-top: 10%;
   margin-bottom: 10%;
+  min-width: 350px;
   border:0;
   box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
   text-align: center;
@@ -32,7 +33,9 @@
 }
 
 .profile_pic {
-  max-width: 200px;
+  width: 70%;
+  padding: 20px;
+  border-radius: 50%;
 }
 
 .button_to {
