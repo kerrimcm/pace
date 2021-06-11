@@ -1,53 +1,50 @@
 <h1>Plan a run</h1>
 
-<head>    
+<head>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 
 <body>
-<table>
-  <thead>
-    <tr>
-      <th>Location name</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @meetups.each do |meetup| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= meetup.name %></td>
-        <td><%= meetup.latitude %></td>
-        <td><%= meetup.longitude %></td>
-        <td><%= link_to 'Show', meetup %></td>
-        <td><%= link_to 'Edit', edit_meetup_path(meetup) %></td>
-        <td><%= link_to 'Delete', meetup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Location name</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
+    </thead>
 
-    <%= render 'form', meetup: @meetup %>
+    <tbody>
+      <% @meetups.each do |meetup| %>
+        <tr>
+          <td><%= meetup.name %></td>
+          <td><%= meetup.latitude %></td>
+          <td><%= meetup.longitude %></td>
+          <td><%= link_to 'Show', meetup %></td>
+          <td><%= link_to 'Edit', edit_meetup_path(meetup) %></td>
+          <td><%= link_to 'Delete', meetup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
 
-    <input
-      id="pac-input"
-      class="controls"
-      type="text"
-      placeholder="Search Box"
-    />
+      <%= render 'form', meetup: @meetup %>
 
-    <div style='width: 800px;'>
-      <div id="map" style='width: 800px; height: 400px;'>
-        <%= javascript_pack_tag 'mapLogic' %>
+      <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Search Box"
+      />
+
+      <div style='width: 800px;'>
+        <div id="map" style='width: 800px; height: 400px;'>
+          <%= javascript_pack_tag 'mapLogic' %>
+        </div>
       </div>
-    </div>
-  </tbody>
-</table>
+    </tbody>
+  </table>
   <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnP7KbdWHqUI-wHT_wxXqT6f3go4rYfkM&callback=initAutocomplete&libraries=places&v=weekly"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnP7KbdWHqUI-wHT_wxXqT6f3go4rYfkM&callback=window.initAutocomplete&libraries=places&v=weekly"
     async
   ></script>
 </body>
-
-
-
