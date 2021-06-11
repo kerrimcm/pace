@@ -9,6 +9,7 @@ def sign_up_jane
   select('Female', from: 'Gender')
   select('Couch', from: 'Running ability')
   select('Speed', from: 'Fitness Goals')
+  attach_file('Profile picture', './spec/fixtures/miss_piggy.jpg')
   fill_in "Email", with: "jdoe@email.com"
   fill_in "Password", with: "password"
   fill_in "Password confirmation", with: "password"
@@ -24,6 +25,7 @@ def sign_up_mark
   select('Male', from: 'Gender')
   select('Marathon', from: 'Running ability')
   select('Distance', from: 'Fitness Goals')
+  attach_file('Profile picture', './spec/fixtures/miss_piggy.jpg')
   fill_in "Email", with: "mark@email.com"
   fill_in "Password", with: "password"
   fill_in "Password confirmation", with: "password"
