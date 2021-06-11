@@ -1,5 +1,10 @@
 <h1>Plan a run</h1>
 
+<head>    
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
 <table>
   <thead>
     <tr>
@@ -24,6 +29,13 @@
 
     <%= render 'form', meetup: @meetup %>
 
+    <input
+      id="pac-input"
+      class="controls"
+      type="text"
+      placeholder="Search Box"
+    />
+
     <div style='width: 800px;'>
       <div id="map" style='width: 800px; height: 400px;'>
         <%= javascript_pack_tag 'mapLogic' %>
@@ -31,6 +43,11 @@
     </div>
   </tbody>
 </table>
-<br>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnP7KbdWHqUI-wHT_wxXqT6f3go4rYfkM&callback=initAutocomplete&libraries=places&v=weekly"
+    async
+  ></script>
+</body>
+
 
 
