@@ -3,6 +3,9 @@ require 'rails_helper'
 
 feature "Users can message each other" do
   scenario "Once a user is signed up they can send and receive messages" do
+
+    #--------------------------------
+
     visit "/"
     click_link "Sign up"
     fill_in "First name", with: "Jane"
@@ -17,6 +20,9 @@ feature "Users can message each other" do
     fill_in "Password confirmation", with: "password"
     click_button "Sign up"
     click_link "Logout"
+
+    #-------------------------------
+
     visit "/"
     click_link "Sign up"
     fill_in "First name", with: "Mark"
@@ -30,10 +36,13 @@ feature "Users can message each other" do
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Sign up"
+
+    #---------------------------------
+
     click_button "View Jane's Profile"
-    click_link "start a convo"
+    click_link "Message this user"
     fill_in "message[body]", with: "Hi Jane"
-    click_button "Send Reply"
+    click_button "Send message"
     click_link "Logout"
     visit "/"
     click_link "Login"
@@ -41,7 +50,7 @@ feature "Users can message each other" do
     fill_in "Password", with: "password"
     click_button "Log in"
     click_link "View inbox"
-    click_link "mark@email.com"
+    click_link "Mark"
     expect(page).to have_content "Hi Jane"
   end
 end
