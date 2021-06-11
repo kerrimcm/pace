@@ -1,7 +1,7 @@
 <h1> new report </h1>
 
 <div class="input_message_form">
-  <%= form_with do |f| %>
+  <%= form_for @report, url: user_reports_path do |f| %>
     <%= f.text_area :body, class: "message_area"%>
     <%= f.submit "Confirm report" %>
   <% end %>

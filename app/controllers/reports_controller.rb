@@ -1,11 +1,12 @@
 class ReportsController < ApplicationController
-  def create
-    @report = Report.new(report_params)
-    redirect_to root_url
-  end
 
   def new
+    @report = Report.new
+  end
 
+  def create
+    @report = Report.create(report_params)
+    redirect_to root_url
   end
 
   private
