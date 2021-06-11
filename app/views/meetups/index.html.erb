@@ -21,15 +21,29 @@
         <td><%= link_to 'Show', meetup %></td>
         <td><%= link_to 'Edit', edit_meetup_path(meetup) %></td>
         <td><%= link_to 'Destroy', meetup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <div style='width: 800px;'>
-          <div id="map" style='width: 800px; height: 400px;'>
-            <!-- #MAP GOES HERE -->
-            <!-- #MAP GOES HERE -->
-            <!-- #MAP GOES HERE -->
-          </div>
-        </div>
       </tr>
     <% end %>
+    <div style='width: 800px;'>
+      <div id="map" style='width: 800px; height: 400px;'></div>
+    </div>
+    <script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers([
+        {
+          "lat": 37.3333945,
+          "lng": -121.8806499,
+          "picture": {
+            "width":  32,
+            "height": 32
+          },
+          "infowindow": "SJSU"
+        }
+      ]);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+    </script>
   </tbody>
 </table>
 
