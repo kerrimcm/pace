@@ -4,6 +4,7 @@ class MeetupsController < ApplicationController
   # GET /meetups or /meetups.json
   def index
     @meetups = Meetup.all
+    @meetup = Meetup.new
   end
 
   # GET /meetups/1 or /meetups/1.json
