@@ -2,7 +2,9 @@
 <div class="main-body">
 
   <h2>My conversations</h2>
-
+  <% if @conversations.empty? %>
+    <p> You do not have any conversations yet </p>
+  <% else %>
   <% @conversations.each do |conversation| %>
     <div class="my-conversations">
       <span class="conversations">
@@ -17,4 +19,5 @@
       </span>
      </div>
   <% end %>
+<% end %>
 </div>
