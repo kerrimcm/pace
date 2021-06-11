@@ -1,6 +1,16 @@
 class ReportsController < ApplicationController
   def create
-    @reported_user = User.find(params[:user_id])
-    @report = @reported_user.reports.create(params[:report].permit(:body))
+    @report = Report.new(report_params)
+    redirect_to root_url
+  end
+
+  def new
+
+  end
+
+  private
+
+  def report_params
+    params.require(:report).permit(:body)
   end
 end

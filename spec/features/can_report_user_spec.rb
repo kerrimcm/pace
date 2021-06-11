@@ -34,6 +34,8 @@ feature "Users can report each other" do
     click_button "View Jane's Profile"
     click_link "Report this user"
 
+    expect(page).to have_content "new report"
+
     fill_in "message[body]", with: "Reason for report"
     click_link "Confirm report"
 
