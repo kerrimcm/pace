@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root "users#index"
   post "/users/:id", to: "users#show"
   post "/users/:id/edit", to: "users#edit"
-  resources :users
+  resources :users do
+    resources :reports
+  end
   resources :conversations do
     resources :messages
   end
