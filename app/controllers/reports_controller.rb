@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.create(report_params)
-    redirect_to root_url
+    redirect_to "/users/#{params[:user_id]}"
   end
 
   private

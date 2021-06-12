@@ -34,14 +34,13 @@ feature "Users can report each other" do
     click_button "View Jane's Profile"
     click_link "Report this user"
 
-    expect(page).to have_content "new report"
+    expect(page).to have_content "Report a user"
 
     fill_in "report[body]", with: "Reason for report"
     click_button "Confirm report"
 
-    expect(page).to have_content "Thank you for reporting this user. Our admin team will look into this matter."
-    click_link "Return to users"
-
-    expect(current_path).to eq('/')
+    expect(page).to have_content "Jane"
+    expect(page).to have_content "Message this user"
+    expect(page).to have_content "You have reported this user! Our admin team is looking into this."
   end
 end
