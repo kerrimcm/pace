@@ -36,8 +36,8 @@ feature "Users can report each other" do
 
     expect(page).to have_content "new report"
 
-    fill_in "message[body]", with: "Reason for report"
-    click_link "Confirm report"
+    fill_in "report[body]", with: "Reason for report"
+    click_button "Confirm report"
 
     expect(page).to have_content "Thank you for reporting this user. Our admin team will look into this matter."
     click_link "Return to users"

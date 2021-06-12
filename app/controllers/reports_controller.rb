@@ -2,6 +2,7 @@ class ReportsController < ApplicationController
 
   def new
     @report = Report.new
+    @user = User.find(params[:user_id])
   end
 
   def create
@@ -12,6 +13,6 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:body)
+    params.require(:report).permit(:body, :user_id)
   end
 end
