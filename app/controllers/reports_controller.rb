@@ -3,7 +3,6 @@ class ReportsController < ApplicationController
   def new
     @report = Report.new
     @user = User.find(params[:user_id])
-    @reporter_id = User.find(params[:reporter_id])
   end
 
   def create
