@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @reports = Report.all
+    @reported = reported?(@reports, @user, current_user)
   end
 
   def edit
@@ -33,5 +34,13 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  def reported?(reports, reported_user, reporter_user)
+    report_match = false
+    reports.each do |report|
+      report_match = true if report.user_id == reported_user.id && report.reporter_id == reporter_user.id
+    end
+    report_match
   end
 end

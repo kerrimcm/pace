@@ -1,11 +1,7 @@
 <%= stylesheet_link_tag "users", :media => "screen" %>
 <div class="main-body">
   <div class="user-container">
-    <% report_match = false %>
-    <% @reports.each do |report| %>
-      <% report_match = true if report.user_id == @user.id && report.reporter_id == current_user.id %>
-    <% end %>
-    <% if report_match %>
+    <% if @reported %>
       You have reported this user! Our admin team is looking into this.
     <% end %>
 
