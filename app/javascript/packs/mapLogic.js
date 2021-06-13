@@ -47,26 +47,27 @@ window.initAutocomplete = function initAutocomplete() {
     // For each place, get the icon, name and location.
     const bounds = new google.maps.LatLngBounds();
     places.forEach((place) => {
+      console.log(place.geometry.location.toJSON())
       if (!place.geometry || !place.geometry.location) {
         console.log("Returned place contains no geometry");
         return;
       }
-      const icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25),
-      };
-      // Create a marker for each place.
-      markers.push(
-        new google.maps.Marker({
-          map,
-          icon,
-          title: place.name,
-          position: place.geometry.location,
-        })
-      );
+      // const icon = {
+      //   url: place.icon,
+      //   size: new google.maps.Size(25, 25),
+      //   origin: new google.maps.Point(0, 0),
+      //   anchor: new google.maps.Point(17, 34),
+      //   scaledSize: new google.maps.Size(25, 25),
+      // };
+      // // Create a marker for each place.
+      // markers.push(
+      //   new google.maps.Marker({
+      //     map,
+      //     icon,
+      //     title: place.name,
+      //     position: place.geometry.location,
+      //   })
+      // );
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
@@ -76,5 +77,25 @@ window.initAutocomplete = function initAutocomplete() {
       }
     });
     map.fitBounds(bounds);
+  });
+
+  // # new code! this gets lat long upon clicking.
+  let infoWindow = new google.maps.InfoWindow({
+    content: "Click the map to get Lat/Lng!",
+    position: { lat: 51.51284874525074, lng: -0.1573314555616207 },
+  });
+  infoWindow.open(map);
+  // Configure the click listener.
+  map.addListener("click", (mapsMouseEvent) => {
+    // Close the current InfoWindow.
+    infoWindow.close();
+    // Create a new InfoWindow.
+    infoWindow = new google.maps.InfoWindow({
+      position: mapsMouseEvent.latLng,
+    });
+    infoWindow.setContent(
+      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
+    );
+    infoWindow.open(map);
   });
 }
