@@ -25,9 +25,12 @@
       <%= link_to "Endorse this user", new_user_endorsement_path(user_id: @user.id) %>
     <% end %>
   </div>
+    <% counter = 0 %>
     <% @endorsements.each do |endorsement| %>
       <% if endorsement.user_id == @user.id %>
-        <%= endorsement.body %>
+        <% counter += 1 %>
+        <%= endorsement.body %> <br />
       <% end %>
     <% end %>
+    👍 <%= counter %>
 </div>
