@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @endorsement = Endorsement.new
+    @endorsements = Endorsement.all
     @user = User.find(params[:id])
   end
 
