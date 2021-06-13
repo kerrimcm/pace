@@ -8,5 +8,6 @@ feature 'User endorsements' do
 
     click_button "View Jane's Profile"
     expect(page).to have_content "Endorse this user"
+    fill_in "endorse[body]", with: "I loved running with Jane"
   end
 end

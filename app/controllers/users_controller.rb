@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @endorsement = Endorsement.new
   end
 
   def edit
