@@ -1,3 +1,5 @@
+require_relative '../../config/api_keys'
+
 class MeetupsController < ApplicationController
   before_action :set_meetup, only: %i[ show edit update destroy ]
 
@@ -5,6 +7,8 @@ class MeetupsController < ApplicationController
   def index
     @meetups = Meetup.all
     @meetup = Meetup.new
+    @api_key = ENV.fetch('GOOGLE_MAPS_API_KEY')
+    # puts 'HERE', @api_key, 'HERE'
   end
 
   # GET /meetups/1 or /meetups/1.json

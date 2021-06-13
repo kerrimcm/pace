@@ -43,8 +43,7 @@
       </div>
     </tbody>
   </table>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnP7KbdWHqUI-wHT_wxXqT6f3go4rYfkM&callback=window.initAutocomplete&libraries=places&v=weekly"
-    async
-  ></script>
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{@api_key}&callback=window.initAutocomplete&libraries=places&v=weekly" %>
+
+
 </body>
