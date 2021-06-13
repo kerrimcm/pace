@@ -19,6 +19,8 @@ class UsersController < ApplicationController
   def show
     @endorsements = Endorsement.all
     @user = User.find(params[:id])
+    @user_endorsements = push_user_endorsements(@endorsements, @user)
+    @endorsement_counter = calculate_user_endorsements(@endorsements, @user)
   end
 
   def edit
@@ -33,5 +35,21 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  def push_user_endorsements(endorsements, user)
+    user_endorsements = []
+    endorsements.each do |endorsement|
+      user_endorsements << endorsement.body if endorsement.user_id == user.id
+    end
+    user_endorsements
+  end
+
+  def calculate_user_endorsements(endorsements, user)
+    counter = 0
+    endorsements.each do |endorsement|
+      counter+= 1 if endorsement.user_id == user.id
+    end
+    counter
   end
 end
