@@ -1,7 +1,7 @@
 class EndorsementsController < ApplicationController
-
-  def index
-    @endorsements = Endorsement.all
+  def new
+    @endorsement = Endorsement.new
+    @user = User.find(params[:user_id])
   end
 
   def create
@@ -12,6 +12,6 @@ class EndorsementsController < ApplicationController
   private
 
   def endorsement_params
-    params.require(:report).permit(:body, :user_id, :endorser_id)
+    params.require(:endorsement).permit(:body, :user_id, :endorser_id)
   end
 end

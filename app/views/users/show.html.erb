@@ -22,13 +22,7 @@
 
     <% if current_user.id != @user.id %>
       <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
-      <p> Endorse this user </p>
-      <%= form_with model: @endorsement do |f| %>
-        <%= f.text_area :body, class: "message_area"%>
-        <%= f.text_field :user_id, value: @user.id, type: "hidden" %>
-        <%= f.text_field :endorser_id, value: current_user.id, type: "hidden" %>
-        <%= f.submit "👍" %>
-      <% end %>
+      <%= link_to "Endorse this user", new_user_endorsement_path(user_id: @user.id) %>
     <% end %>
   </div>
 </div>

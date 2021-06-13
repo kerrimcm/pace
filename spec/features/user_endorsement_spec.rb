@@ -7,7 +7,14 @@ feature 'User endorsements' do
     sign_up_mark
 
     click_button "View Jane's Profile"
-    expect(page).to have_content "Endorse this user"
-    fill_in "endorse[body]", with: "I loved running with Jane"
+    click_link "Endorse this user"
+
+    fill_in "endorsement[body]", with: "I loved running with Jane"
+    click_button "👍"
+
+    expect(page).to have_content "Jane"
+    expect(page).to have_content "Message this user"
+    expect(page).to have_content "I loved running with Jane"
+    expect(page).to have_content "👍 1"
   end
 end
