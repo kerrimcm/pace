@@ -13,4 +13,10 @@ class User < ApplicationRecord
     where("LOWER(first_name) LIKE :term OR LOWER(postcode) LIKE :term OR LOWER(gender) LIKE :term 
       OR LOWER(ability) LIKE :term OR LOWER(goals) LIKE :term", term: "%#{params}%")
   end
+
+
+  has_many :endorsements
+
+  has_many :reports
+
 end
