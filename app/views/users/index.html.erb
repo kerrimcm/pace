@@ -1,5 +1,11 @@
 <%= stylesheet_link_tag "home_page", :media => "screen" %>
 
+<%= form_tag("/users", method: 'get') do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
 <div class="background">
   <div class="main-body">
     <% if user_signed_in? %>
