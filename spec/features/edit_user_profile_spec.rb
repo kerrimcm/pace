@@ -3,7 +3,7 @@ require 'rails_helper'
 feature "Edit button" do
   scenario "User can see an edit button" do
     sign_up_jane
-    click_button "View user"
+    click_link "View profile"
     expect(page).to have_content "jdoe@email.com"
     expect(page).to have_link "Edit"
   end
@@ -12,7 +12,7 @@ feature "Edit button" do
     sign_up_jane
     click_link "Logout"
     sign_up_mark
-    find(:xpath, "/html/body/div[1]/div/div[1]/form/input[1]").click
+    click_button "View Jane's Profile"
     expect(page).not_to have_link "Edit"
   end
 end

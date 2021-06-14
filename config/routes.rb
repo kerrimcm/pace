@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :meetups
   devise_for :users
   root "users#index"
   post "/users/:id", to: "users#show"
