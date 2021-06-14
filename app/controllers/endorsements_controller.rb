@@ -9,6 +9,10 @@ class EndorsementsController < ApplicationController
     redirect_to "/users/#{params[:user_id]}"
   end
 
+  def show
+    @endorsement = Endorsement.new
+  end
+
   private
 
   def endorsement_params

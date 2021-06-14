@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
   def show
     @endorsements = Endorsement.all
+    @endorsement = Endorsement.new
     @user = User.find(params[:id])
 
     @user_endorsements = push_user_endorsements(@endorsements, @user)
