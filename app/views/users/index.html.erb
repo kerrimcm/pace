@@ -24,7 +24,11 @@
             <p><strong> Ability: </strong> <%= user.ability %></p>
             <p><strong> Goals: </strong> <%= user.goals %></p>
           </div>
-          <%= button_to "View #{user.first_name}'s Profile", user %> 
+          <% if user == current_user %>
+            <%= button_to "View Your Profile", user %> 
+          <% else %>
+            <%= button_to "View #{user.first_name}'s Profile", user %> 
+          <% end %>
         </div>
       <% end %>
     <% else %>
