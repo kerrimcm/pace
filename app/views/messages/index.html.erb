@@ -12,7 +12,7 @@
       <br />
       <br />
       <span class="sent_bubble_meta">
-        <small> <%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
+        <small> <b><%= 'unread ' if message.read.to_s == '0' %></b><%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
       </span>
       <br />
     </div>
@@ -26,7 +26,7 @@
       <br>
       <br>
       <span class="received_bubble_meta">
-        <small> <%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
+        <small> <b><%= 'unread ' if message.read.to_s == '0' %></b><%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
       </span>
       <br />
     </div>
@@ -37,7 +37,8 @@
 <div class="input_message_form">
 <%= form_for [@conversation, @message] do |f| %>
   <%= f.text_area :body, class: "message_area"%>
-  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
+  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+  <%= f.number_field :read, value: 0, type: "hidden" %> <br />
   <%= f.submit "Send message" %>
 <% end %>
 </div>
