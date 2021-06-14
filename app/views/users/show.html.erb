@@ -26,7 +26,15 @@
 
     <% if current_user.id != @user.id %>
       <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
+
+      <%= link_to "Endorse this user", new_user_endorsement_path(user_id: @user.id) %>
+
       <%= link_to "Report this user", new_user_report_path(user_id: @user.id) %>
+
     <% end %>
   </div>
+    <% @user_endorsements.each do |endorsement| %>
+      <%= endorsement %> <br />
+    <% end %>
+    👍 <%= @endorsement_counter %>
 </div>
