@@ -95,6 +95,7 @@ window.initAutocomplete = function initAutocomplete() {
     });
     infoWindow.setContent(
       JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
+      "hello"
     );
     infoWindow.open(map);
   });
