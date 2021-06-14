@@ -1,6 +1,10 @@
 <%= stylesheet_link_tag "users", :media => "screen" %>
 <div class="main-body">
   <div class="user-container">
+    <% if @reported %>
+      You have reported this user! Our admin team is looking into this.
+    <% end %>
+
     <% if @user.profile_pic.attached? %>
       <% image = @user.profile_pic %>
     <% else %>
@@ -22,6 +26,7 @@
 
     <% if current_user.id != @user.id %>
       <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
+      <%= link_to "Report this user", new_user_report_path(user_id: @user.id) %>
     <% end %>
   </div>
 </div>

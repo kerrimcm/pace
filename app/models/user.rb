@@ -8,5 +8,5 @@ class User < ApplicationRecord
 
   has_one_attached :profile_pic
   validates :first_name, :postcode, :dob, :gender, :ability, :goals, :profile_pic, presence: true
-
+  has_many :reports
 end
