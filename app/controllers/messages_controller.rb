@@ -4,12 +4,9 @@ class MessagesController < ApplicationController
   end
   
   def index
-    @active_messages = @conversation.messages
+    @messages = @conversation.messages.sort_by { |k| k["created_at"].to_s }
     @message = @conversation.messages.new
-    update_read_mesages(@conversation, @active_messages)
-    @unsorted_messages = arrayify(@active_messages)
-    p "😀😀 #{@unsorted_messages}"
-    @messages = @unsorted_messages.sort_by { |k| k["created_at"].to_s }
+    update_read_mesages(@conversation, @messages)
   end
   
   def new
@@ -39,13 +36,5 @@ class MessagesController < ApplicationController
 
   def execute_statement(sql)
     results = ActiveRecord::Base.connection.execute(sql)
-  end
-
-  def arrayify(messages)
-    array_messages = []
-    messages.each do |message|
-      array_messages << message
-    end
-    array_messages
   end
 end
