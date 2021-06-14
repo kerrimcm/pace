@@ -57,6 +57,7 @@ class UsersController < ApplicationController
       counter+= 1 if endorsement.user_id == user.id
     end
     counter
+  end
 
   def reported?(reports, reported_user, reporter_user)
     report_match = false
