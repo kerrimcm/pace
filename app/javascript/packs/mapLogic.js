@@ -71,8 +71,7 @@ window.initAutocomplete = function initAutocomplete() {
     x = JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
     xx = mapsMouseEvent.latLng.toJSON(), null, 2
     infoWindow.open(map);
-    name_field = document.getElementById('meetup_name')
-    name_field.value = 'HOWDY'
+
     lat_field = document.getElementById('meetup_latitude')
     lat_field.value = xx.lat
     long_field = document.getElementById('meetup_longitude')
