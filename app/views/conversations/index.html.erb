@@ -7,18 +7,24 @@
   <% else %>
   <% @conversations.each do |conversation| %>
     <div class="my-conversations">
-      <span class="conversations">
-     <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
-      <% if conversation.sender_id == current_user.id %>
-       <% recipient = User.find(conversation.recipient_id) %>
+    <span class="conversations">
+      <!-- this line below prevents a bug -->
+      <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
+        <% if conversation.sender_id == current_user.id %>
+          <% recipient = User.find(conversation.recipient_id) %>
+        <% else %>
+          <% recipient = User.find(conversation.sender_id) %>
+        <% end %>
+      <% if !@current_meetup %>
+        <%= link_to recipient.first_name, conversation_messages_path(conversation)%>
       <% else %>
-       <% recipient = User.find(conversation.sender_id) %>
+       <a href="/conversations/<% recipient_id %>/messages?meetup=#{@current_meetup.id}"> <%= recipient.first_name  %> </a>
+       <!-- link_to "+ Service", new_my_service_path(:account_id => acct.id) -->
       <% end %>
-      <%= link_to recipient.first_name, conversation_messages_path(conversation)%>
       <!-- edit this to take in the current meetup arg if it exists -->
      <% end %>
-      </span>
-     </div>
+    </span>
+    </div>
   <% end %>
 <% end %>
 </div>
