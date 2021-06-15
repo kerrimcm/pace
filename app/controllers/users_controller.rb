@@ -35,7 +35,6 @@ class UsersController < ApplicationController
 
     @reports = Report.all
     @reported = reported?(@reports, @user, current_user)
-
   end
 
   def edit
@@ -51,7 +50,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
-
 
   def push_user_endorsements(endorsements, user)
     user_endorsements = []
@@ -75,6 +73,5 @@ class UsersController < ApplicationController
       report_match = true if report.user_id == reported_user.id && report.reporter_id == reporter_user.id
     end
     report_match
-
   end
 end
