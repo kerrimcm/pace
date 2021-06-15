@@ -14,6 +14,7 @@ class MeetupsController < ApplicationController
   # GET /meetups/1 or /meetups/1.json
   def show
     @api_key = ENV.fetch('GOOGLE_MAPS_API_KEY')
+    @current_meetup = Meetup.find(params[:id])
   end
 
   # GET /meetups/new
