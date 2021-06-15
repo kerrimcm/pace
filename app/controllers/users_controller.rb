@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    if params[:q].downcase == "male"
+    if !params[:q].nil? && params[:q].downcase == "male"
       @male_users = []
       @users.each do |user|
         @male_users << user if user.gender == "Male"
