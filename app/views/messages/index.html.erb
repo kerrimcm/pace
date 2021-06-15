@@ -34,11 +34,19 @@
   <% end %>
  <% end %>
 
-<div class="input_message_form">
-<%= form_for [@conversation, @message] do |f| %>
-  <%= f.text_area :body, class: "message_area"%>
-  <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
-  <%= f.submit "Send message" %>
-<% end %>
-</div>
+  <div class="input_message_form">
+  <% if !@current_meetup%>
+    <%= form_for [@conversation, @message] do |f| %>
+      <%= f.text_area :body, class: "message_area"%>
+      <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
+      <%= f.submit "Send message" %>
+    <% end %>
+  <% else %>
+    <%= form_for [@conversation, @message] do |f| %>
+      <%= f.text_area :body, class: "message_area", value: "hey, let's go for a run"%>
+      <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
+      <%= f.submit "Send message" %>
+    <% end %>
+  <% end %>
 
+</div>

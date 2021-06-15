@@ -7,7 +7,6 @@ class ConversationsController < ApplicationController
     if params[:format]
       @current_meetup = Meetup.find(params[:format])
     end
-    p @current_meetup, "HERE HERE HERE"
   end
   def create
     if Conversation.between(params[:sender_id], params[:recipient_id]).present?
