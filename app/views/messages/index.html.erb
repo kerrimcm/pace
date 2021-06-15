@@ -7,7 +7,11 @@
 
     <div class="message_sent">
       <span class="sent_bubble">
-        <%= message.body %>
+        <% if (message.body).include?('http://') %>
+          <%= link_to message.body, "#{message.body}" %>
+        <% else %>
+          <%= message.body %>
+        <% end %>
       </span>
       <br />
       <br />
@@ -42,9 +46,8 @@
       <%= f.submit "Send message" %>
     <% end %>
   <% else %>
-  <!-- <a href="/meetups/#{@current_meetup.id}">Let\'s go for a run</a> -->
     <%= form_for [@conversation, @message] do |f| %>
-      <%= f.text_area :body, class: "message_area" %>
+      <%= f.text_area :body, class: "message_area", value: "http://localhost:3000/meetups/#{@current_meetup.id}" %>
       <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
       <%= f.submit "Send message" %>
     <% end %>
