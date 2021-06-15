@@ -33,7 +33,7 @@ class MeetupsController < ApplicationController
         # this should take us to conversations.
         # format.html { redirect_to @meetup, notice: "Meetup was successfully created." }
         # instead of showing the meetup, we want to share it!
-        format.html { redirect_to conversations_path(@meetup), notice: "Meetup was successfully created." }
+        format.html { redirect_to conversations_path(@meetup), notice: "Meetup was successfully created. Please click on a conversation to share your meetup." }
         format.json { render :show, status: :created, location: @meetup }
         # p @meetup, '< MEETUP'
       else
