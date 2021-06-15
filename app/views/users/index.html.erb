@@ -24,6 +24,7 @@
             <p><strong> Ability: </strong> <%= user.ability %></p>
             <p><strong> Goals: </strong> <%= user.goals %></p>
           </div>
+
           <% if user == current_user %>
             <%= button_to "View Your Profile", user %> 
           <% else %>
@@ -42,4 +43,3 @@
     <% end %>
   </div>
 </div>
-
