@@ -7,6 +7,7 @@
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           <li><%= link_to('View profile', current_user) %></li>
           <li><%= link_to("View inbox", conversations_path) %></li>
+          <li><%= link_to("Plan a meetup", meetups_path) %></li>
         <% end %>
         </ul>
     </nav>
