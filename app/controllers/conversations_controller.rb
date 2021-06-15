@@ -6,6 +6,7 @@ class ConversationsController < ApplicationController
     @conversations = Conversation.all
     @unread_counts = unread_array_builder
   end
+  
   def create  
     if Conversation.between(params[:sender_id], params[:recipient_id]).present? 
        @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first

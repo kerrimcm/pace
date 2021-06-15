@@ -8,7 +8,6 @@ class UsersController < ApplicationController
     if params[:q] && !params[:q].empty? 
       @users = @users.search(params[:q].downcase)
     end
-    @unread_messages = unread_counter
   end
 
   def create
@@ -29,7 +28,6 @@ class UsersController < ApplicationController
 
     @reports = Report.all
     @reported = reported?(@reports, @user, current_user)
-    @unread_messages = unread_counter
   end
 
   def edit
@@ -68,24 +66,5 @@ class UsersController < ApplicationController
       report_match = true if report.user_id == reported_user.id && report.reporter_id == reporter_user.id
     end
     report_match
-  end
-
-  def unread_counter
-    unread_messages = 0
-    conversations = Conversation.all
-    conversations.each do |conversation|
-      unless current_user.nil?
-        if conversation.recipient_id == current_user.id || conversation.sender_id == current_user.id
-          conversation.messages.each do |message|
-            unless message.user_id == current_user.id
-              if message.read.to_s == '0'
-                unread_messages += 1
-              end
-            end
-          end
-        end
-      end
-    end
-    unread_messages
   end
 end
