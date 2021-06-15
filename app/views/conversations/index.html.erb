@@ -10,17 +10,18 @@
       <span class="conversations">
      <% if conversation.sender_id == current_user.id || conversation.recipient_id == current_user.id %>
       <% if conversation.sender_id == current_user.id %>
-       <% recipient = User.find(conversation.recipient_id) %>
+        <% recipient = User.find(conversation.recipient_id) %>
       <% else %>
-       <% recipient = User.find(conversation.sender_id) %>
+        <% recipient = User.find(conversation.sender_id) %>
       <% end %>
       <% unread_messages = 0 %>
       <% @unread_counts.each do |count|%>
-      <% unread_messages = count[:unread_count] if count[:user_id] == recipient.id %>
+        <% unread_messages = count[:unread_count] if count[:user_id] == recipient.id %>
       <% end %>
-      <%= link_to recipient.first_name, conversation_messages_path(conversation)%>
-      <% unless unread_messages == 0 %>
-      (<%= unread_messages %>)
+      <% if unread_messages.nil? || unread_messages == 0 %>
+        <%= link_to(recipient.first_name, conversation_messages_path(conversation)) %>
+      <% else %>
+        <b><%= link_to("#{recipient.first_name} (#{unread_messages})", conversation_messages_path(conversation)) %></b></li>
       <% end %>
      <% end %>
       </span>
