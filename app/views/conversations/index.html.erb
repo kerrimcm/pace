@@ -18,8 +18,7 @@
       <% if !@current_meetup %>
         <%= link_to recipient.first_name, conversation_messages_path(conversation)%>
       <% else %>
-       <a href="/conversations/<% recipient_id %>/messages?meetup=#{@current_meetup.id}"> <%= recipient.first_name  %> </a>
-       <!-- link_to "+ Service", new_my_service_path(:account_id => acct.id) -->
+        <%= link_to recipient.first_name, conversation_messages_path(conversation, @current_meetup.id)%>
       <% end %>
       <!-- edit this to take in the current meetup arg if it exists -->
      <% end %>
