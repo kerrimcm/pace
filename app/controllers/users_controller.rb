@@ -5,8 +5,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    if params[:q] && !params[:q].empty? 
-      @users = @users.search(params[:q].downcase)
+    if !params[:q].nil? && params[:q].downcase == "male"
+      @male_users = []
+      @users.each do |user|
+        @male_users << user if user.gender == "Male"
+      end
+      @users = @male_users
+    elsif params[:q] && !params[:q].empty? 
+      @users = @users.search(params[:q].downcase) 
     end
   end
 
@@ -21,6 +27,7 @@ class UsersController < ApplicationController
 
   def show
     @endorsements = Endorsement.all
+    @endorsement = Endorsement.new
     @user = User.find(params[:id])
 
     @user_endorsements = push_user_endorsements(@endorsements, @user)

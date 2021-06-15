@@ -18,14 +18,18 @@
       <% @unread_counts.each do |count|%>
         <% unread_messages = count[:unread_count] if count[:user_id] == recipient.id %>
       <% end %>
-      <% if unread_messages.nil? || unread_messages == 0 %>
-        <%= link_to(recipient.first_name, conversation_messages_path(conversation)) %>
+      <% if !@current_meetup %>
+        <% if unread_messages.nil? || unread_messages == 0 %>
+          <%= link_to(recipient.first_name, conversation_messages_path(conversation)) %>
+        <% else %>
+          <b><%= link_to("#{recipient.first_name} (#{unread_messages})", conversation_messages_path(conversation)) %></b></li>
+        <% end %>
       <% else %>
-        <b><%= link_to("#{recipient.first_name} (#{unread_messages})", conversation_messages_path(conversation)) %></b></li>
+        <%= link_to recipient.first_name, conversation_messages_path(conversation, @current_meetup.id)%>
       <% end %>
      <% end %>
-      </span>
-     </div>
+    </span>
+    </div>
   <% end %>
 <% end %>
 </div>

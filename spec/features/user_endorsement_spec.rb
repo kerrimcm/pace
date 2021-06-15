@@ -7,7 +7,6 @@ feature 'User endorsements' do
     sign_up_mark
 
     click_button "View Jane's Profile"
-    click_link "Endorse this user"
 
     fill_in "endorsement[body]", with: "I loved running with Jane"
     click_button "👍"

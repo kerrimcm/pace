@@ -1,14 +1,17 @@
 class ConversationsController < ApplicationController
-  before_action :authenticate_user! 
-  
+  before_action :authenticate_user!
+
   def index
     @users = User.all
     @conversations = Conversation.all
     @unread_counts = unread_array_builder
+    if params[:format]
+      @current_meetup = Meetup.find(params[:format])
+    end
   end
   
-  def create  
-    if Conversation.between(params[:sender_id], params[:recipient_id]).present? 
+  def create
+    if Conversation.between(params[:sender_id], params[:recipient_id]).present?
        @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
     else
        @conversation = Conversation.create!(conversation_params)

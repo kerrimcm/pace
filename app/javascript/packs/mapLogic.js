@@ -1,19 +1,4 @@
-// handler = Gmaps.build('Google');
-// handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-//   markers = handler.addMarkers([
-//     {
-//       "lat": 51.51284874525074,
-//       "lng": -0.1573314555616207,
-//       "picture": {
-//         "width":  32,
-//         "height": 32
-//       },
-//       "infowindow": "SJSU"
-//     }
-//   ]);
-//   handler.bounds.extendWith(markers);
-//   handler.fitMapToBounds();
-// });
+
 console.log('I AM IN MAP LOGIC')
 window.initAutocomplete = function initAutocomplete() {
   console.log('I AM IN initAUTOCOMPLETE!!')
@@ -44,30 +29,15 @@ window.initAutocomplete = function initAutocomplete() {
       marker.setMap(null);
     });
     markers = [];
-    // For each place, get the icon, name and location.
+    // For each place, get the lat/long and console.log it
     const bounds = new google.maps.LatLngBounds();
     places.forEach((place) => {
       console.log(place.geometry.location.toJSON())
+      console.log(place.formatted_address)
       if (!place.geometry || !place.geometry.location) {
         console.log("Returned place contains no geometry");
         return;
       }
-      // const icon = {
-      //   url: place.icon,
-      //   size: new google.maps.Size(25, 25),
-      //   origin: new google.maps.Point(0, 0),
-      //   anchor: new google.maps.Point(17, 34),
-      //   scaledSize: new google.maps.Size(25, 25),
-      // };
-      // // Create a marker for each place.
-      // markers.push(
-      //   new google.maps.Marker({
-      //     map,
-      //     icon,
-      //     title: place.name,
-      //     position: place.geometry.location,
-      //   })
-      // );
 
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
@@ -81,21 +51,32 @@ window.initAutocomplete = function initAutocomplete() {
 
   // # new code! this gets lat long upon clicking.
   let infoWindow = new google.maps.InfoWindow({
-    content: "Click the map to get Lat/Lng!",
+    content: "click a spot to set a meetup point",
     position: { lat: 51.51284874525074, lng: -0.1573314555616207 },
   });
   infoWindow.open(map);
+
+
   // Configure the click listener.
   map.addListener("click", (mapsMouseEvent) => {
-    // Close the current InfoWindow.
+    // Close the old InfoWindow.
     infoWindow.close();
     // Create a new InfoWindow.
     infoWindow = new google.maps.InfoWindow({
       position: mapsMouseEvent.latLng,
     });
     infoWindow.setContent(
-      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
+      "Meet here"
     );
+    x = JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
+    xx = mapsMouseEvent.latLng.toJSON(), null, 2
     infoWindow.open(map);
+
+    lat_field = document.getElementById('meetup_latitude')
+    lat_field.value = xx.lat
+    long_field = document.getElementById('meetup_longitude')
+    long_field.value = xx.lng
   });
+
+
 }
