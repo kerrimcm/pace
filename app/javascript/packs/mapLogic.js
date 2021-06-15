@@ -1,4 +1,3 @@
-
 console.log('I AM IN MAP LOGIC')
 window.initAutocomplete = function initAutocomplete() {
   console.log('I AM IN initAUTOCOMPLETE!!')
@@ -77,6 +76,4 @@ window.initAutocomplete = function initAutocomplete() {
     long_field = document.getElementById('meetup_longitude')
     long_field.value = xx.lng
   });
-
-
 }

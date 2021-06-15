@@ -1,17 +1,13 @@
 <p>
-  <strong>Location name:</strong>
+  <strong>Location description</strong> <br />
   <%= @meetup.name %>
 </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @meetup.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @meetup.longitude %>
-</p>
-
-<%= link_to 'Edit', edit_meetup_path(@meetup) %> |
-<%= link_to 'Back', meetups_path %>
+<body>
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'>
+      <%= javascript_pack_tag 'mapLogic' %>
+    </div>
+  </div>
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{@api_key}&callback=window.initAutocomplete&libraries=places&v=weekly" %>
+</body>
