@@ -75,4 +75,4 @@ gem 'rspec'
 gem 'rubocop'
 gem 'simplecov'
 gem 'simplecov-console'
-
+gem 'unicode-display_width', '~> 2.0'
