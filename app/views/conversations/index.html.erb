@@ -14,7 +14,14 @@
       <% else %>
        <% recipient = User.find(conversation.sender_id) %>
       <% end %>
+      <% unread_messages = 0 %>
+      <% @unread_counts.each do |count|%>
+      <% unread_messages = count[:unread_count] if count[:user_id] == recipient.id %>
+      <% end %>
       <%= link_to recipient.first_name, conversation_messages_path(conversation)%>
+      <% unless unread_messages == 0 %>
+      (<%= unread_messages %>)
+      <% end %>
      <% end %>
       </span>
      </div>
