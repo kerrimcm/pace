@@ -9,7 +9,6 @@ def replace_text_urls_with_links(text)
       text.gsub!(url, "<a href=#{url} target='_blank'>#{url}</a>")
     end
     text.html_safe
-
 end
 
 end
