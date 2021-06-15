@@ -42,8 +42,9 @@
       <%= f.submit "Send message" %>
     <% end %>
   <% else %>
+  <!-- <a href="/meetups/#{@current_meetup.id}">Let\'s go for a run</a> -->
     <%= form_for [@conversation, @message] do |f| %>
-      <%= f.text_area :body, class: "message_area", value: "hey, let's go for a run"%>
+      <%= f.text_area :body, class: "message_area" %>
       <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
       <%= f.submit "Send message" %>
     <% end %>
