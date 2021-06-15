@@ -11,7 +11,7 @@
         <br />
         <br />
         <span class="sent_bubble_meta">
-          <small> <%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
+          <small> <b><%= 'unread ' if message.read.to_s == '0' %></b><%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
         </span>
         <br />
       </div>
@@ -23,7 +23,7 @@
         <br>
         <br>
         <span class="received_bubble_meta">
-          <small> <%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
+          <small> <b><%= 'unread ' if message.read.to_s == '0' %></b><%= user.first_name %> <%= message.message_time.to_s[9,20] %> </small>
         </span>
         <br />
       </div>
@@ -36,14 +36,15 @@
     <%= form_for [@conversation, @message] do |f| %>
       <%= f.text_area :body, class: "message_area"%>
       <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
+      <%= f.number_field :read, value: 0, type: "hidden" %> <br />
       <%= f.submit "Send message" %>
     <% end %>
   <% else %>
     <%= form_for [@conversation, @message] do |f| %>
       <%= f.text_area :body, class: "message_area", value: "Let's meet here http://localhost:3000/meetups/#{@current_meetup.id}" %>
       <%= f.text_field :user_id, value: current_user.id, type: "hidden" %> <br />
+      <%= f.number_field :read, value: 0, type: "hidden" %> <br />
       <%= f.submit "Send message" %>
     <% end %>
   <% end %>
-
 </div>

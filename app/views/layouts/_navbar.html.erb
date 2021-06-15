@@ -6,7 +6,11 @@
         <% if user_signed_in? %>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           <li><%= link_to('View profile', current_user) %></li>
-          <li><%= link_to("View inbox", conversations_path) %></li>
+          <% if User.unread_counter(current_user).nil? || User.unread_counter(current_user) == 0 %>
+            <li><%= link_to("View inbox", conversations_path) %></li>
+          <% else %>
+            <li><b><%= link_to("View inbox (#{User.unread_counter(current_user)})", conversations_path) %></b></li>
+          <% end %>
           <li><%= link_to("Plan a meetup", meetups_path) %></li>
         <% end %>
         </ul>
