@@ -52,10 +52,16 @@ window.initAutocomplete = function initAutocomplete() {
     map.fitBounds(bounds);
   });
 
-  // this is an info window
-  let infoWindow = new google.maps.InfoWindow({
+  const infowindow = new google.maps.InfoWindow({
     content: "Here's your meetup spot!",
-    position: { lat: curr_lat, lng: curr_lng },
   });
-  infoWindow.open(map);
+
+  const marker = new google.maps.Marker({
+    position: { lat: curr_lat, lng: curr_lng },
+    map,
+    title: "Meetup spot",
+  });
+  marker.addListener("click", () => {
+    infowindow.open(map, marker);
+  });
 }
