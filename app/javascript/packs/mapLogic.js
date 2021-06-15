@@ -66,7 +66,7 @@ window.initAutocomplete = function initAutocomplete() {
       position: mapsMouseEvent.latLng,
     });
     infoWindow.setContent(
-      JSON.stringify("here!")
+      "Meet here"
     );
     x = JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2)
     xx = mapsMouseEvent.latLng.toJSON(), null, 2
