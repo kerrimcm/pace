@@ -6,7 +6,11 @@
         <% if user_signed_in? %>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           <li><%= link_to('View profile', current_user) %></li>
-          <li><%= link_to("View inbox", conversations_path) %></li>
+          <% if @unread_messages.nil? || @unread_messages == 0 %>
+            <li><%= link_to("View inbox", conversations_path) %></li>
+          <% else %>
+            <li><b><%= link_to("View inbox (#{@unread_messages})", conversations_path) %></b></li>
+          <% end %>
         <% end %>
         </ul>
     </nav>
