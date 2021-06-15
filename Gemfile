@@ -74,3 +74,5 @@ gem 'devise', '~> 4.8'
 gem 'rspec'
 gem 'rubocop'
 gem 'simplecov'
+gem 'simplecov-console'
+
