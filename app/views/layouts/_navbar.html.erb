@@ -11,6 +11,7 @@
           <% else %>
             <li><b><%= link_to("View inbox (#{User.unread_counter(current_user)})", conversations_path) %></b></li>
           <% end %>
+          <li><%= link_to("Plan a meetup", meetups_path) %></li>
         <% end %>
         </ul>
     </nav>

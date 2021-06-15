@@ -1,4 +1,3 @@
-
 console.log('I AM IN MAP LOGIC')
 window.initAutocomplete = function initAutocomplete() {
   console.log('I AM IN initAUTOCOMPLETE!!')
@@ -51,7 +50,7 @@ window.initAutocomplete = function initAutocomplete() {
 
   // # new code! this gets lat long upon clicking.
   let infoWindow = new google.maps.InfoWindow({
-    content: "click a spot to set a meetup point",
+    content: "Click a spot to set a meetup point",
     position: { lat: 51.51284874525074, lng: -0.1573314555616207 },
   });
   infoWindow.open(map);
@@ -77,6 +76,4 @@ window.initAutocomplete = function initAutocomplete() {
     long_field = document.getElementById('meetup_longitude')
     long_field.value = xx.lng
   });
-
-
 }

@@ -1,17 +1,28 @@
 <p>
-  <strong>Location name:</strong>
+  <strong>Location description</strong> <br />
   <%= @meetup.name %>
+  <h1 id="current_lat" visibility: hidden > <%= @current_meetup.latitude %> </h1>
+  <h1 id="current_lng" visibility: hidden > <%= @current_meetup.longitude %> </h1>
+
+
 </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @meetup.latitude %>
-</p>
+<head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @meetup.longitude %>
-</p>
+<body>
 
-<%= link_to 'Edit', edit_meetup_path(@meetup) %> |
-<%= link_to 'Back', meetups_path %>
+  <input
+    id="pac-input"
+    class="controls"
+    type="text"
+    placeholder="Search Box"
+  />
+  <div style='width: 800px;'>
+    <div id="map" style='width: 800px; height: 400px;'>
+      <%= javascript_pack_tag 'staticMeetupMap' %>
+    </div>
+  </div>
+  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{@api_key}&callback=window.initAutocomplete&libraries=places&v=weekly" %>
+</body>
