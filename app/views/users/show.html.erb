@@ -36,6 +36,11 @@
     <% @users.each do |user| %>
       <% user_name = user.first_name if user.id == endorsement[:user_id] %>
     <% end %>
-    👍 <i><%= user_name %></i> - <%= endorsement[:message] %> <br />
+    <% if endorsement[:message] == '' %>
+      <i><%= user_name %></i>
+    <% else %>
+      <i><%= user_name %></i> 🗣 <%= endorsement[:message] %>
+    <% end %>
+    <br />
   <% end %>
 </div>
