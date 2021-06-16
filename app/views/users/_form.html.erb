@@ -1,10 +1,8 @@
-<h1> Endorse a user </h1>
-
 <div class="input_message_form">
   <%= form_for([@user, @endorsement]) do |f| %>
-    <%= f.text_area :body, class: "message_area"%>
-    <%= f.text_field :user_id, value: @user.id, type: "hidden" %> <br />
-    <%= f.text_field :endorser_id, value: current_user.id, type: "hidden" %> <br />
     <%= f.submit "👍" %>
+    <%= f.text_field :body, placeholder: '...reason for thumbs up', class: "message_area" %>
+    <%= f.text_field :user_id, value: @user.id, type: "hidden" %>
+    <%= f.text_field :endorser_id, value: current_user.id, type: "hidden" %>
   <% end %>
 </div>
