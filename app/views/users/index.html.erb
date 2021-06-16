@@ -34,13 +34,15 @@
         </div>
       <% end %>
     <% else %>
-      <span class='button_loggedout'>
-        <%= link_to "Login", new_user_session_path %>
-      </span>
-      </br>
-      <span class='button_loggedout'>
-        <%= link_to "Sign up", new_user_registration_path %>
-      </span>
+      <div class="landing_page_buttons">
+        <span class='button_loggedout'>
+          <%= link_to "Login", new_user_session_path %>
+        </span>
+        </br>
+        <span class='button_loggedout'>
+          <%= link_to "Sign up", new_user_registration_path %>
+        </span>
+      </div>
     <% end %>
 
   <!-- </div> -->
