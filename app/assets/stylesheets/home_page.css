@@ -1,16 +1,25 @@
+
+
 .background {
-  background-color: #f9fafb;
+  /* background-color: #f9fafb; */
+  /* background-color: red; */
+
   min-height: 100vh;
   margin: 0;
   margin-top: 20px;
   margin-bottom: 20px;
+  /* background-image: url('../../images/sea_bg.jpg'); */
+  background-image: url('sea_bg.jpg');
+
 }
 
 .main-body {
-  background-color: #f9fafb;
+  /* background-color: #f9fafb; */
+  /* background-color: red; */
   margin-left: auto;
   margin-right: auto;
   width: 20%;
+
 }
 
 .user-container {
@@ -62,9 +71,10 @@
 	text-decoration:none;
 	text-shadow:0px 1px 3px rgb(250, 102, 102);
   margin: auto;
-  width: 50%;
+  width: 20%;
   padding: 10px;
   text-align: center;
+  align-items: center;
 }
 .button_loggedout:hover {
 	background-color:rgb(250, 132, 132);
@@ -73,3 +83,5 @@
 	position:relative;
 	top:1px;
 }
+
+/* nicepage css */

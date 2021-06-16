@@ -7,7 +7,7 @@
 <% end %>
 
 <div class="background">
-  <div class="main-body">
+  <!-- <div class="main-body"> -->
     <% if user_signed_in? %>
       <% @users.each do |user| %>
         <div class="user-container">
@@ -26,20 +26,20 @@
           </div>
 
           <% if user == current_user %>
-            <%= button_to "View Your Profile", user %> 
+            <%= button_to "View Your Profile", user %>
           <% else %>
-            <%= button_to "View #{user.first_name}'s Profile", user %> 
+            <%= button_to "View #{user.first_name}'s Profile", user %>
           <% end %>
         </div>
       <% end %>
     <% else %>
-      <div class='button_loggedout'>
+      <span class='button_loggedout'>
         <%= link_to "Login", new_user_session_path %>
-      </div>
+      </span>
       </br>
-      <div class='button_loggedout'>
+      <span class='button_loggedout'>
         <%= link_to "Sign up", new_user_registration_path %>
-      </div>
+      </span>
     <% end %>
-  </div>
+  <!-- </div> -->
 </div>
