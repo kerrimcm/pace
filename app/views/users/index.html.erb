@@ -34,7 +34,8 @@
         </div>
       <% end %>
     <% else %>
-      <div class="landing_page_buttons">
+      <div class="landing_page_content">
+        <%= image_tag "clear_logo.png", class: "landing_page_logo"%>
         <span class='button_loggedout'>
           <%= link_to "Login", new_user_session_path %>
         </span>
