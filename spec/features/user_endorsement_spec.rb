@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 feature 'User endorsements' do
+
+
   scenario 'a user can endorse another user' do
     sign_up_jane
     click_link "Logout"
@@ -13,7 +15,7 @@ feature 'User endorsements' do
 
     expect(page).to have_content "Jane"
     expect(page).to have_content "Message this user"
-    expect(page).to have_content "I loved running with Jane"
+    expect(page).to have_content "👍 Mark - I loved running with Jane"
     expect(page).to have_content "👍 1"
   end
 end
