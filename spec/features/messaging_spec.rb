@@ -1,9 +1,13 @@
 require 'rails_helper'
 
-
-feature "Users can message each other" do
+feature "Messages" do
+  scenario "User without messages sees a no messages message" do
+    sign_up_jane
+    click_link "View inbox"
+    expect(page).to have_content "You do not have any conversations yet"
+  end
+  
   scenario "Once a user is signed up they can send and receive messages" do
-
     sign_up_jane
     click_link "Logout"
     sign_up_mark
