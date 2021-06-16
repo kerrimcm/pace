@@ -18,11 +18,9 @@
   font-family: 'Open Sans', sans-serif;
   background-color: white;
   box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 5%;
-  padding-bottom: 50%;
+  padding: 20% 20% 20% 20%;
   min-width: 350px;
+  max-width: 350px;
   text-align: center;
   border-radius: 20px;
   margin: 0 auto;
@@ -34,11 +32,9 @@
 .user-endorsements-container {
   font-family: 'Open Sans', sans-serif;
   background-color: white;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 5%;
-  padding-bottom: 50%;
-  min-width: 150px;
+  padding: 20% 20% 20% 20%;
+  min-width: 350px;
+  max-width: 350px;
   box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
   text-align: center;
   border-radius: 20px;
@@ -60,11 +56,16 @@
   border-radius: 50%;
 }
 
-.message_area {
-  width: 200px;
-  height: 50px;
+.new_endorsement input {
+  width: 20px;
+  height: 20px;
 }
 
-.hover_over_thumbs_up :hover {
-  background-color: black;
+.hover_over_thumbs_up {
+  border: none;
+}
+
+.message_area {
+  width: 100px;
+  
 }
