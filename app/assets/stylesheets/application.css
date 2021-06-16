@@ -17,7 +17,7 @@
 .header-container {
     width: 1000px;
     height: 100px;
-    margin: auto;
+    /* margin: auto; */
   }
 
 .pace-logo {
@@ -69,4 +69,11 @@ nav a {
   min-height: 50px;
   margin-bottom: 0px;
   clear: both;
+}
+
+/* jess */
+
+form.new_user{
+  margin: 10%;
+  align-items: center;
 }
