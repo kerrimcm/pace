@@ -21,6 +21,9 @@
   width: 20%;
   opacity: 0.6;
   margin: auto;
+  /* text-align: center; */
+  align-items: center
+  display: inline-flex;
 }
 
 
@@ -28,14 +31,15 @@
 .user-container {
   margin: auto;
   font-family: 'Open Sans', sans-serif;
-  background-color: white;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 10%;
-  margin-bottom: 10%;
-  min-width: 350px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  margin: 10%;
+  min-width: 150px;
+  max-width: 250px;
   border:0;
-  box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
+  box-shadow:0px 0px 7px 0px rgba(191, 184, 184, 0.92);
   text-align: center;
   border-radius: 20px;
 }
