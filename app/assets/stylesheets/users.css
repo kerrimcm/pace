@@ -1,29 +1,52 @@
 /* // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/ */
+.profile-background {
+  min-height: 100vh;
+}
 
-.main-body {
-  background-color: #f9fafb;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.profile-body {
+  flex-direction: column;
+  width: 20px;
+  margin: auto;
+  align-items: center;
+  display: inline-flex;
   width: 20%;
 }
 
-.user-container {
+.user-container-profile {
   font-family: 'Open Sans', sans-serif;
   background-color: white;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 10%;
-  margin-bottom: 10%;
+  box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 50%;
   min-width: 350px;
-  max-width: 550px;
-  border:0;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+} 
+
+.user-endorsements-container {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 50%;
+  min-width: 150px;
   box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
   text-align: center;
   border-radius: 20px;
+  margin: 0 auto;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .user-details {
@@ -35,4 +58,9 @@
   width: 70%;
   padding: 20px;
   border-radius: 50%;
+}
+
+.message_area {
+  width: 200px;
+  height: 50px;
 }
