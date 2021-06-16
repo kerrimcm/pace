@@ -3,7 +3,9 @@
 
 <div class="background">
   <%= stylesheet_link_tag "home_page", :media => "screen" %>
+
   <!-- <div class="main-body"> -->
+
     <% if user_signed_in? %>
     <%= form_tag("/users", method: 'get') do %>
       <%= label_tag(:q, "Search for:") %>
@@ -42,5 +44,7 @@
         <%= link_to "Sign up", new_user_registration_path %>
       </span>
     <% end %>
+
   <!-- </div> -->
+
 </div>

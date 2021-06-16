@@ -5,9 +5,9 @@
   /* background-color: red; */
 
   min-height: 100vh;
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin: 0; */
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
   /* background-image: url('../../images/sea_bg.jpg'); */
   background-image: url('sea_bg.jpg');
 
@@ -16,13 +16,17 @@
 .main-body {
   /* background-color: #f9fafb; */
   /* background-color: red; */
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   width: 20%;
-
+  opacity: 0.6;
+  margin: auto;
 }
 
+
+
 .user-container {
+  margin: auto;
   font-family: 'Open Sans', sans-serif;
   background-color: white;
   padding-left: 10%;
@@ -58,26 +62,27 @@
 }
 
 .button_loggedout {
-	box-shadow: 9px 7px 4px 0px rgb(230, 202, 202);
-	background-color:rgb(250, 222, 222);
-	border-radius:28px;
-	border:1px solid rgb(250, 182, 182);
+	/* box-shadow: 9px 7px 4px 0px rgb(230, 202, 202); */
+	/* background-color:rgb(250, 222, 222);
+	border-radius:20px;
+	border:1px solid rgb(250, 182, 182); */
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
-	padding:16px 31px;
+	/* padding:16px 31px; */
 	text-decoration:none;
-	text-shadow:0px 1px 3px rgb(250, 102, 102);
+	/* text-shadow:0px 1px 3px rgb(250, 102, 102); */
   margin: auto;
   width: 20%;
   padding: 10px;
   text-align: center;
-  align-items: center;
+
 }
 .button_loggedout:hover {
 	background-color:rgb(250, 132, 132);
+  opacity: 0.9;
 }
 .button_loggedout:active {
 	position:relative;
