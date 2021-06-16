@@ -6,8 +6,8 @@ feature "User can search for other users" do
     click_link "Logout"
     sign_up_mark
 
-    fill_in "Search for:", with: "Jane"
-    click_button "Search"
+    fill_in "q", with: "Jane"
+    click_button "Find your running partner"
     expect(page).not_to have_content "Mark"
   end
   
@@ -16,8 +16,8 @@ feature "User can search for other users" do
     click_link "Logout"
     sign_up_mark
 
-    fill_in "Search for:", with: "Marathon"
-    click_button "Search"
+    fill_in "q", with: "Marathon"
+    click_button "Find your running partner"
     expect(page).not_to have_content "Couch"
   end
 end
