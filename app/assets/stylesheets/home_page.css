@@ -8,7 +8,7 @@
   /* margin-bottom: 20px; */
   /* background-image: url('../../images/sea_bg.jpg'); */
   background-image: url('sea_bg.jpg');
-
+  background-repeat: no-repeat;
 }
 
 .landing_page_logo{
@@ -41,6 +41,7 @@
   border-radius: 20px;
   position: relative;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .user-details {
@@ -86,7 +87,6 @@
   background-color: rgba(250, 250, 250, 0.3);
 }
 
-
 .button_loggedout:hover {
 	background-color:rgba(250, 122, 122, 0.3);
 }
@@ -95,9 +95,8 @@
 	top:1px;
 }
 
-
 input[type="text" i] {
-  width: 40%;
+  width: 30%;
   height: 24px;
   border-color: rgb(179, 177, 177);
   border-width: 1px;
@@ -122,6 +121,7 @@ input[type="text" i]:focus {
 }
 
 .search {
-  margin-left: 120px;
   margin-top: 15px;
+  position: relative;
+  margin: 0 auto;
 }
