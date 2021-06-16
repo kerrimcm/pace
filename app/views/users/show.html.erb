@@ -22,19 +22,25 @@
     <% if current_user.id == @user.id %>
       <p><%= @user.email %></p>
       <%= link_to "Edit", edit_user_registration_path %>
-    <% end %>
-
-    <% if current_user.id != @user.id %>
+    <% else %>
       <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
-
       <%= link_to "Report this user", new_user_report_path(user_id: @user.id) %>
-      
       <%= render 'form', endorsement: @endorsement %>
-
     <% end %>
   </div>
-    <% @user_endorsements.each do |endorsement| %>
-      <%= endorsement %> <br />
+    <% unless @endorsement_counter == 0 %>
+      👍 <%= @endorsement_counter %> <br />
     <% end %>
-    👍 <%= @endorsement_counter %>
+  <% @user_endorsements.each do |endorsement| %>
+    <% user_name = '' %>
+    <% @users.each do |user| %>
+      <% user_name = user.first_name if user.id == endorsement[:user_id] %>
+    <% end %>
+    <% if endorsement[:message] == '' %>
+      <i><%= user_name %></i>
+    <% else %>
+      <i><%= user_name %></i> 🗣 <%= endorsement[:message] %>
+    <% end %>
+    <br />
+  <% end %>
 </div>

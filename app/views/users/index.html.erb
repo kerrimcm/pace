@@ -1,17 +1,15 @@
-
-
-
 <div class="background">
   <%= stylesheet_link_tag "home_page", :media => "screen" %>
 
   <!-- <div class="main-body"> -->
 
     <% if user_signed_in? %>
-    <%= form_tag("/users", method: 'get') do %>
-      <%= label_tag(:q, "Search for:") %>
-      <%= text_field_tag(:q) %>
-      <%= submit_tag("Search") %>
-    <% end %>
+      <div class="wrap">
+        <%= form_tag("/users", method: 'get', class:'search') do %>
+        <%= text_field_tag :q %>
+        <%= submit_tag("Find your running partner", class: "searchButton") %>
+     <% end %>
+      </div>
       <% @users.each do |user| %>
         <div class="user-container">
           <% if user.profile_pic.attached? %>

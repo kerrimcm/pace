@@ -93,4 +93,32 @@
 	top:1px;
 }
 
-/* nicepage css */
+input[type="text" i] {
+  width: 40%;
+  height: 24px;
+  border-color: rgb(179, 177, 177);
+  border-width: 1px;
+}
+
+input[type="text" i]:focus { 
+  outline: none;
+  border-color: rgb(250, 132, 132);
+  box-shadow: 0 0 10px rgb(248, 199, 199);
+}
+
+.searchButton {
+  font-family: 'Open Sans', sans-serif;
+  width: 170px;
+  height: 30px;
+  border: 1px solid rgb(250, 132, 132);
+  background: rgb(250, 132, 132);
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.search {
+  margin-left: 120px;
+  margin-top: 15px;
+}
