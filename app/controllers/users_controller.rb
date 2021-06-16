@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   def show
     @endorsements = Endorsement.all
     @endorsement = Endorsement.new
+    @users = User.all
     @user = User.find(params[:id])
 
     @user_endorsements = push_user_endorsements(@endorsements, @user)
@@ -54,7 +55,7 @@ class UsersController < ApplicationController
   def push_user_endorsements(endorsements, user)
     user_endorsements = []
     endorsements.each do |endorsement|
-      user_endorsements << endorsement.body if endorsement.user_id == user.id
+      user_endorsements << { user_id: endorsement.endorser_id, message: endorsement.body } if endorsement.user_id == user.id
     end
     user_endorsements
   end
