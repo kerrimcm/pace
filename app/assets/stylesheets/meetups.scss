@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+body{
+  justify-content: center;
+}
+
 h1 {
   color: #111;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -23,14 +27,6 @@ p {
   justify-content: center;
 }
 
-#meetup_name {
-  text-align: center;
-}
-
-#map {
-  margin: 5%;
-}
-
 #form {
   text-align: center;
   margin-left: 20%;
@@ -44,4 +40,21 @@ p {
   font-size: 15px;
   text-align: center;
   display: inline-block !important;
+}
+
+#meetup_name {
+  text-align: center;
+}
+
+.map-holder{
+  min-width: 350px;
+  justify-content: center;
+
+}
+
+#map {
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 90%;
+  justify-content: center;
 }
