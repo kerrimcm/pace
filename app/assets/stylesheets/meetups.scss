@@ -3,19 +3,19 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 h1 {
-  color: #111; 
-  font-family: 'Open Sans Condensed', sans-serif; 
-  font-size: 30px; 
-  padding: 2% 3%; 
-  text-align: center; 
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  padding: 2% 3%;
+  text-align: center;
   // text-transform: uppercase;
 }
 
 p {
   text-align: center;
-  color: #111; 
-  font-family: 'Open Sans Condensed', sans-serif; 
-  font-size: 15px; 
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 15px;
   // text-transform: uppercase;
 }
 
@@ -26,20 +26,20 @@ p {
 #map {
   margin: 5%;
 
-   
+
 }
 
 #form {
   text-align: center;
-  margin-left: 42%;
-  margin-right: 42%;
+  margin-left: 20%;
+  margin-right: 20%;
   display: flex;
+  justify-content: center;
 }
 
 .field {
-  font-family: 'Open Sans Condensed', sans-serif; 
-  font-size: 20px; 
-  text-align: center; 
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 15px;
+  text-align: center;
   display: inline-block !important;
 }
-
