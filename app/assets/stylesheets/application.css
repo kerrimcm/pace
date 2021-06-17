@@ -76,43 +76,41 @@ nav a {
   clear: both;
 }
 
-/* jess */
-
 .top2 {
-  margin:0px;
-  text-align:center;
+  margin: 0px;
+  text-align: center;
 }
 
 .top2a {
-  display:inline-block;
+  display: inline-block;
 }
 
 .top2a img {
-  width:270px;
-  margin-right:20px;
+  width: 270px;
+  margin-right: 20px;
 }
 
 .top2b {
-  padding:22px 6px 16px 16px;
-  font:normal 15px 'Open Sans',arial;
-  display:inline-block;
-  vertical-align:top;
+  padding: 22px 6px 16px 16px;
+  font: normal 15px 'Open Sans',arial;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .top2b a {
   color:rgb(210, 110, 110);
-  padding:26px 20px;
-  border-bottom:0px solid rgb(210, 110, 110);
-  text-decoration:none;
-  transition:border-bottom 0.2s linear 0s;
+  padding: 26px 20px;
+  border-bottom: 0px solid rgb(210, 110, 110);
+  text-decoration: none;
+  transition: border-bottom 0.2s linear 0s;
 }
 
 .top2b a:hover {
   color:rgb(210, 110, 110);
   font-weight: bold;
-  background:transparent;
-  text-decoration:none;
-  border-bottom:7px solid rgb(210, 110, 110);
+  background: transparent;
+  text-decoration: none;
+  border-bottom: 7px solid rgb(210, 110, 110);
 }
 
 .top3 {
@@ -143,40 +141,40 @@ nav a {
 }
 
 #topmenu {
-  position:fixed;
-  width:32px;
-  height:32px;
-  top:42px;
-  right:80px;
-  display:none;
-  cursor:pointer;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 42px;
+  right: 80px;
+  display: none;
+  cursor: pointer;
 }
 
 #menu2 {
-  position:fixed;
-  visibility:hidden;
-  display:none;
-  width:100%;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+  width: 100%;
   background:rgba(210, 110, 110, 0.7);
-  top:85px;
-  padding:10px 0px;
-  z-index:8;
+  top: 85px;
+  padding: 10px 0px;
+  z-index: 8;
 }
 
 #menu2 ul {
-  list-style:none;
-  padding:0px;
-  text-align:center;
+  list-style: none;
+  padding: 0px;
+  text-align: center;
   padding-inline-start: 0px;
   margin-left: -75px;
 }
 
 #menu2 li a {
   color:white;
-  font-size:130%;
-  padding:8px;
-  display:block;
-  text-decoration:none;
+  font-size: 130%;
+  padding: 8px;
+  display: block;
+  text-decoration: none;
 }
 
 #menu2 li a:hover {
