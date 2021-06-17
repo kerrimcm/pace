@@ -14,12 +14,13 @@
 
   <div class="field">
     <%= form.label :Description %>
-    <%= form.text_field :name %>
     <%= form.hidden_field :latitude %>
     <%= form.hidden_field :longitude %>
   </div>
-
-  <div class="actions">
+  <div class="field">
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
     <%= form.submit %>
   </div>
 <% end %>

@@ -2,18 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-body {
-
-  
-
-}
 h1 {
   color: #111; 
   font-family: 'Open Sans Condensed', sans-serif; 
   font-size: 30px; 
   padding: 2% 3%; 
   text-align: center; 
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 p {
@@ -21,18 +16,7 @@ p {
   color: #111; 
   font-family: 'Open Sans Condensed', sans-serif; 
   font-size: 15px; 
-  text-transform: uppercase;
-}
-
-.actions {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  // text-transform: uppercase;
 }
 
 #meetup_name {
@@ -40,17 +24,21 @@ p {
 }
 
 #map {
-   position: absolute;
+  margin: 5%;
+
+   
 }
 
 #form {
   text-align: center;
+  margin-left: 42%;
+  margin-right: 42%;
 }
 
 .field {
-
   font-family: 'Open Sans Condensed', sans-serif; 
-  font-size: 30px; 
+  font-size: 20px; 
   text-align: center; 
-
+  display: inline-block;
 }
+
