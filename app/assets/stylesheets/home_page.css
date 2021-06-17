@@ -116,7 +116,9 @@ input:focus {
 select{
   width: 90%;
   border-color: rgb(179, 177, 177);
-  height: 24px;
+  height: 28px;
+  border-style: inset;
+  border-width: 2px;
 }
 
 .searchButton {
