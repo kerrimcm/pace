@@ -1,29 +1,24 @@
 /* // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/ */
-.profile-background {
+/* .profile-background {
   min-height: 100vh;
-}
+} */
 
 .profile-body {
   flex-direction: column;
-  width: 20px;
-  margin: auto;
-  align-items: center;
-  display: inline-flex;
-  width: 20%;
+  display: grid;
+  place-items: center;
 }
 
 .user-container-profile {
   font-family: 'Open Sans', sans-serif;
   background-color: white;
   box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
-  padding: 20% 20% 20% 20%;
-  min-width: 350px;
-  max-width: 350px;
+  padding: 4% 4% 4% 4%;
+  min-width: 300px;
+  max-width: 300px;
   text-align: center;
-  margin: 0 auto;
-  margin-left: 35px;
   margin-bottom: 60px;
   margin-top: 20px;
 } 
@@ -31,26 +26,22 @@
 .user-endorsements-container {
   font-family: 'Open Sans', sans-serif;
   background-color: white;
-  padding: 20% 20% 20% 20%;
-  min-width: 350px;
-  max-width: 350px;
   box-shadow:0 0 15px 4px rgba(248, 139, 139, 0.472);
+  padding: 4% 4% 4% 4%;
+  min-width: 300px;
+  max-width: 300px;
   text-align: left;
-  margin: 0 auto;
-  margin-left: 35px;
   margin-bottom: 70px;
-  margin-top: 20px;
-  margin-bottom: 60px;
 }
 
 .user-details {
-  padding: 20px;
+  padding: 10px;
   display: inline-block;
 }
 
 .profile_pic {
   width: 70%;
-  padding: 20px;
+  padding: 15px;
   border-radius: 50%;
 }
 
@@ -59,7 +50,7 @@
   border: none;
   min-width: 50px;
   min-height: 50px;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .thumbs-up:hover {
@@ -67,8 +58,9 @@
   transition: 0.5s;
 }
 
-.message_area {
-  width: 150px;
+.input_message_form {
+  width: 400px;
+  height: 200px;
 }
 
 .wrap {
