@@ -1,8 +1,9 @@
 <body>
+
   <div class="background">
-    <div class="login-form">
-      <h2>Log in</h2>
+    <div class="form-body">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <h2>Log in</h2>
         <div class="field">
           <%= f.label :email %>
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -26,4 +27,5 @@
       <% end %>
     </div>
   </div>
-<body>
+  
+</body>

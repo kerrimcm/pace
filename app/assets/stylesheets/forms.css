@@ -14,11 +14,41 @@ div.actions{
   display:table-row;
 }
 
-.main-body {
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
+.form-body {
+  /* width: 20%; */
+  opacity: 0.6;
+  margin: auto;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
 }
+
+/* this is LOGIN and SIGN UP */
+form.new_user{
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* this is EDIT */
+form.edit_user{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+
 
 h3{
   font-family: 'Open Sans', sans-serif;
@@ -66,4 +96,3 @@ a::before{
     width: 100%;
   }
 }
-
