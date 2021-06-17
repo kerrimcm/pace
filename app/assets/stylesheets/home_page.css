@@ -20,35 +20,13 @@
 }
 
 .main-body {
-  /* background-color: #f9fafb; */
-  /* background-color: red; */
-  /* margin-left: auto;
-  margin-right: auto; */
   width: 20%;
   opacity: 0.6;
   margin: auto;
-  /* text-align: center; */
   align-items: center;
   display: inline-flex;
 }
 
-.login-form {
-  /* background-color: #f9fafb; */
-  /* background-color: red; */
-  /* margin-left: auto;
-  margin-right: auto; */
-  width: 40%;
-  opacity: 0.6;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-top: 20%;
-  margin-bottom: 20%;
-  /* text-align: center; */
-  align-items: center;
-  display: inline-flex;
-  padding: 2%;
-  background-color: rgba(255, 255, 255, 0.7);
-}
 
 .user-container {
   font-family: 'Open Sans', sans-serif;
@@ -62,7 +40,7 @@
   text-align: center;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   margin-top: 30px;
 }
 
@@ -127,7 +105,8 @@ input[type="text" i] {
   height: 24px;
   border-color: rgb(179, 177, 177);
   border-width: 1px;
-  margin-left: 10px;
+  margin-left: 48px;
+  margin-top: 10px;
 }
 
 input[type="text" i]:focus {
@@ -140,13 +119,18 @@ input[type="text" i]:focus {
   font-family: 'Open Sans', sans-serif;
   width: 170px;
   height: 30px;
-  border: 1px solid rgb(250, 132, 132);
-  background: rgb(250, 132, 132);
+  border: 1px solid rgb(245, 224, 224);
+  background: rgb(245, 224, 224);
   text-align: center;
-  color: #fff;
+  color: rgb(255, 147, 147);
   cursor: pointer;
   font-size: 12px;
   margin-left: 3px;
+}
+
+.searchButton:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .search {
