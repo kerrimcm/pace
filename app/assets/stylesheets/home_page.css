@@ -1,6 +1,7 @@
 .background {
-  background-image: url('fun.png');
-  min-height: 800px
+  background-image: url('smaller_fun.png');
+  min-height: 800px;
+  width: 100%;
   /* background: rgb(126,12,12);
   background: linear-gradient(90deg, rgba(126,12,12,1) 0%, rgba(255,219,219,1) 72%); */
 }
@@ -8,7 +9,8 @@
 .landing_page_background {
   min-height: 100vh;
   background-image: url('sea_bg.jpg');
-  max-width: 1400px;
+  width: 100%;
+  background-repeat:no-repeat;
 }
 
 .landing_page_logo{
