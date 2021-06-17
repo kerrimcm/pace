@@ -1,14 +1,14 @@
 .background {
-  /* background-color: #f9fafb; */
-  /* background-color: red; */
+  background-image: url('fun.png');
+  min-height: 800px
+  /* background: rgb(126,12,12);
+  background: linear-gradient(90deg, rgba(126,12,12,1) 0%, rgba(255,219,219,1) 72%); */
+}
 
+.landing_page_background {
   min-height: 100vh;
-  /* margin: 0; */
-  /* margin-top: 20px; */
-  /* margin-bottom: 20px; */
-  /* background-image: url('../../images/sea_bg.jpg'); */
   background-image: url('sea_bg.jpg');
-
+  max-width: 1400px;
 }
 
 .landing_page_logo{
