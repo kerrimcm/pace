@@ -55,11 +55,11 @@
   transition: 0.5s;
 }
 
-.input_message_form {
+.input_message_form text {
   width: 600px;
   height: 200px;
 }
 
-.wrap {
+/* .wrap {
   text-align: center;
-}
+} */
