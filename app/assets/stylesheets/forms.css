@@ -16,6 +16,7 @@ div.field{
   margin: 3px;
 }
 
+
 div.actions{
   display:table-row;
   margin: 3px;
@@ -30,10 +31,20 @@ div.actions{
   justify-content: center;
 }
 
+.login-form-body {
+  /* width: 20%; */
+  opacity: 0.6;
+  margin: 15%;
+
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
 /* this is LOGIN and SIGN UP */
 form.new_user{
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 10%;
   margin-bottom: 10%;
   justify-content: center;

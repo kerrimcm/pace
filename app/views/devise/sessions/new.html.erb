@@ -1,7 +1,7 @@
 <body>
 
   <div class="background">
-    <div class="form-body">
+    <div class="login-form-body">
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <h2>Log in</h2>
         <div class="field">
@@ -21,8 +21,10 @@
           </div>
         <% end %>
 
-        <div class="actions">
-          <%= f.submit "Log in" %>
+        <div class="actions_centered">
+          <div class="actions">
+            <%= f.submit "Log in" %>
+          </div>
         </div>
       <% end %>
     </div>

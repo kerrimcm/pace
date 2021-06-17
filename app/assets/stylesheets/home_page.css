@@ -107,8 +107,6 @@ input{
 }
 
 
-
-
 input:focus {
   outline: none;
   border-color: rgb(250, 132, 132);
