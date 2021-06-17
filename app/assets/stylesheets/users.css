@@ -57,12 +57,13 @@
 .thumbs-up {
   background: none;
   border: none;
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+  font-size: 40px;
 }
 
 .thumbs-up:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition: 0.5s;
 }
 
