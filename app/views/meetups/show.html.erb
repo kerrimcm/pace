@@ -1,10 +1,9 @@
+<%= stylesheet_link_tag "meetups", :media => "all" %>
 <p>
   <strong>Location description</strong> <br />
   <%= @meetup.name %>
   <h1 id="current_lat" visibility: hidden > <%= @current_meetup.latitude %> </h1>
   <h1 id="current_lng" visibility: hidden > <%= @current_meetup.longitude %> </h1>
-
-
 </p>
 
 <head>
