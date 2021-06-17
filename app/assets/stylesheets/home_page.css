@@ -40,7 +40,6 @@
   min-width: 150px;
   max-width: 250px;
   text-align: center;
-  border-radius: 20px;
   position: relative;
   margin: 0 auto;
   margin-bottom: 55px;
@@ -104,10 +103,11 @@
 }
 
 input[type="text" i] {
-  width: 30%;
+  width: 40%;
   height: 24px;
   border-color: rgb(179, 177, 177);
   border-width: 1px;
+  margin-left: 10px;
 }
 
 input[type="text" i]:focus {
@@ -126,10 +126,25 @@ input[type="text" i]:focus {
   color: #fff;
   cursor: pointer;
   font-size: 12px;
+  margin-left: 3px;
 }
 
 .search {
   margin-top: 15px;
   position: relative;
   margin: 0 auto;
+}
+
+.user_home_button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(250, 132, 132);
+  border: none;
+  color: white;
+  padding: 6px 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }

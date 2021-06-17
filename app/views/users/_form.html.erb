@@ -5,8 +5,6 @@
     <%= f.text_field :body, placeholder: '...reason for thumbs up', class: "message_area" %>    
     <%= f.text_field :user_id, value: @user.id, type: "hidden" %> <br />
     <%= f.text_field :endorser_id, value: current_user.id, type: "hidden" %> <br />
-    <div class="hover_over_thumbs_up">
-    <%= f.submit "👍" %>
-    </div> 
+    <%= f.submit "👍", class: "thumbs-up" %>
   <% end %>
 </div>
