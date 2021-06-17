@@ -5,8 +5,7 @@
     <nav>
         <ul>
           <% if user_signed_in? %>
-            <div class="top2">
-              <div class="top2b">
+            <div class="top2b">
                 <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
                 <li><%= link_to('View profile', current_user) %></li>
                 <% if User.unread_counter(current_user).nil? || User.unread_counter(current_user) == 0 %>
@@ -15,7 +14,6 @@
                   <li><b><%= link_to("View inbox (#{User.unread_counter(current_user)})", conversations_path) %></b></li>
                 <% end %>
                 <li><%= link_to("Plan a meetup", meetups_path) %></li>      
-              </div>
             </div>
             <div id="topmenu" onclick="drop2(event)">
               <div class="bar1"></div>
