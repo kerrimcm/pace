@@ -3,10 +3,12 @@
       <% if user_signed_in? %>
         <div class="background">
           <div class="wrap">
+          <br>
+          <br>
             <%= form_tag("/users", method: 'get', class:'search') do %>
-            <%= text_field_tag :q %>
-            <%= submit_tag("Find your running partner", class: "searchButton") %>
-         <% end %>
+              <%= submit_tag("Find your running partner", class: "searchButton") %>
+              <%= text_field_tag :q %>
+            <% end %>
           </div>
           <% @users.each do |user| %>
             <div class="user-container">
