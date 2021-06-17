@@ -6,7 +6,10 @@ label{
   font-family: 'Open Sans', sans-serif;
 }
 
-
+.actions_centered{
+  margin-left: 2%;
+  margin-top: 2%;
+}
 
 div.field{
   display:table-row;

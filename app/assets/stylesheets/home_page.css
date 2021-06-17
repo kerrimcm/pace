@@ -107,10 +107,16 @@ input{
 }
 
 
+
+
 input:focus {
   outline: none;
   border-color: rgb(250, 132, 132);
   box-shadow: 0 0 10px rgb(248, 199, 199);
+}
+
+input#user_profile_pic{
+  width: 95%;
 }
 
 select{

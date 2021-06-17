@@ -58,19 +58,20 @@
 
         <div class="field">
           <%= f.label :current_password %>
-          <%= f.password_field :current_password, autocomplete: "current-password", placeholder: '6 character minimum' %>
-          <br /><i>(to confirm changes) </i>
+          <%= f.password_field :current_password, autocomplete: "current-password", placeholder: 'to confirm changes' %>
         </div>
 
-        <div class="actions">
-          <%= f.submit "Update" %>
-        </div>
 
-        <div class="actions">
-          <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-          <%= link_to "Back", :back %>
-        </div>
+        <div class="actions_centered">
+          <div class="actions">
+            <%= f.submit "Update" %>
+          </div>
 
+          <div class="actions">
+            <p>Unhappy?</p> <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+            <%= link_to "Back", :back %>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>

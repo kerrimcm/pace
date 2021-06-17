@@ -55,13 +55,16 @@
           <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: '6 character minimum' %>
         </div>
 
-        <div class="actions">
-          <%= f.submit "Sign up" %>
+        <div class="actions_centered">
+          <div class="actions">
+            <%= f.submit "Sign up" %>
+          </div>
+          <br />
+          <div class="actions">
+            <%= render "devise/shared/links" %>
+          </div>
         </div>
 
-        <div class="actions">
-          <%= render "devise/shared/links" %>
-        </div>
       <% end %>
     </div>
   </div>
