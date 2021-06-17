@@ -9,9 +9,10 @@
 
 .landing_page_background {
   min-height: 100vh;
-  background-image: url('sea_bg.jpg');
-  width: 100%;
-  background-repeat:no-repeat;
+  background-image: url('run2.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .landing_page_logo{
