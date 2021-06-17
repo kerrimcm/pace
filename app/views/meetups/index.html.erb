@@ -1,22 +1,29 @@
-<h1>Plan a run</h1>
-<p> Give your meetup spot a description </p>
-
+<%= stylesheet_link_tag "meetups", :media => "all" %>
 <head>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 
 <body>
-    <%= render 'form', meetup: @meetup %>
-    <input
-      id="pac-input"
-      class="controls"
-      type="text"
-      placeholder="Search Box"
-    />
-    <div style='width: 800px;'>
-      <div id="map" style='width: 800px; height: 400px;'>
-        <%= javascript_pack_tag 'mapLogic' %>
-      </div>
+  <div class="aaa">
+    <h1>Plan a run</h1>
+    <div class="instructions">
+      <p> 1. Pick your meetup spot by clicking on the map </p>
+      <p> 2. Give your meetup spot a description </p>
+      <p> 3. Press the 'create meetup' button  </p>
     </div>
-  <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{@api_key}&callback=window.initAutocomplete&libraries=places&v=weekly" %>
+    <div id="form">
+      <%= render 'form', meetup: @meetup %>
+    </div>
+    <div class='map_holder'>
+      <input
+        id="pac-input"
+        class="controls"
+        type="text"
+        placeholder="Search Box"/>
+        <div id="map" style='width: 700px; height: 400px;'>
+          <%= javascript_pack_tag 'mapLogic' %>
+        </div>
+    <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{@api_key}&callback=window.initAutocomplete&libraries=places&v=weekly" %>
+    </div>
+  </div>
 </body>
