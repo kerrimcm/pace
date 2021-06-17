@@ -1,9 +1,6 @@
 /* // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/ */
-/* .profile-background {
-  min-height: 100vh;
-} */
 
 .profile-body {
   flex-direction: column;
@@ -19,7 +16,7 @@
   min-width: 300px;
   max-width: 300px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
   margin-top: 20px;
 } 
 
@@ -59,7 +56,7 @@
 }
 
 .input_message_form {
-  width: 400px;
+  width: 600px;
   height: 200px;
 }
 
