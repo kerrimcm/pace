@@ -1,7 +1,8 @@
 .background {
-  background-image: url('smaller_fun.png');
+  background-image: url('dimmer_fun.jpg');
   min-height: 800px;
   width: 100%;
+  /* opacity: 0.6; */
   /* background: rgb(126,12,12);
   background: linear-gradient(90deg, rgba(126,12,12,1) 0%, rgba(255,219,219,1) 72%); */
 }
@@ -28,6 +29,24 @@
   /* text-align: center; */
   align-items: center;
   display: inline-flex;
+}
+
+.login-form {
+  /* background-color: #f9fafb; */
+  /* background-color: red; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: 40%;
+  opacity: 0.6;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 20%;
+  margin-bottom: 20%;
+  /* text-align: center; */
+  align-items: center;
+  display: inline-flex;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .user-container {
