@@ -33,7 +33,7 @@
         <% if !@user_endorsements.empty? %>
         <div class="user-endorsements-container">
         <% unless @endorsement_counter == 0 %>
-          👍 <%= @endorsement_counter %>
+          Endorsed by 👍 <%= @endorsement_counter %>
         <% end %>
         <br>
         <% @user_endorsements.each do |endorsement| %>
