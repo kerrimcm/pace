@@ -81,3 +81,33 @@ form.new_user{
   margin: 10%;
   align-items: center;
 }
+
+.top2 {margin:0px; text-align:center;}
+.top2a {display:inline-block;}
+.top2a img {width:270px; margin-right:20px;}
+.top2b {padding:22px 6px 16px 16px; font:normal 15px 'Open Sans',arial; display:inline-block; vertical-align:top;}
+.top2b a {color:rgb(210, 110, 110); padding:26px 20px; border-bottom:0px solid rgb(210, 110, 110); text-decoration:none; transition:border-bottom 0.2s linear 0s;}
+.top2b a:hover {margin_top color:rgb(210, 110, 110); font-weight: bold; background:transparent; text-decoration:none; border-bottom:7px solid rgb(210, 110, 110);}
+.top3 {margin:0px; text-align:absolute; left: +60px}
+.bar1, .bar2, .bar3 {width:46px; height:6px; background:rgb(210, 110, 110); margin:5px 3px; transition:0.4s; border-radius:5px;}
+.change .bar1 {transform:rotate(-45deg) translate(-6px, 7px);}
+.change .bar2 {opacity:0;}
+.change .bar3 {transform:rotate(45deg) translate(-5px, -8px);}
+#topmenu {position:fixed; width:32px; height:32px; top:42px; right:80px; display:none; cursor:pointer;}
+#menu2 {position:fixed; visibility:hidden; display:none; width:100%; background:rgba(210, 110, 110, 0.7); top:85px; padding:10px 0px; z-index:8;}
+#menu2 ul {list-style:none; padding:0px; text-align:center;}
+#menu2 li a {color:white; font-size:130%; padding:8px; display:block; text-decoration:none;}
+#menu2 li a:hover {background:rgb(210, 110, 110); color:white;}
+
+@media only screen and (max-width:940px) {
+.top2b a {padding:26px 0px;}
+}
+
+@media only screen and (max-width:740px) {
+.top2a {position:absolute; top:4px; left:1px;}
+.top2a img {width:200px; margin:-2px 0px 0px 2px;}
+.top2b {display:none;}
+#topmenu {display:inline-block;}
+#menu2 {visibility:visible;}
+#cookies {margin:0px auto; left:0px; width:350px; max-width:calc(100% - 12px);}
+}
