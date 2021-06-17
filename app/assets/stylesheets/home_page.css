@@ -113,6 +113,12 @@ input:focus {
   box-shadow: 0 0 10px rgb(248, 199, 199);
 }
 
+select{
+  width: 90%;
+  border-color: rgb(179, 177, 177);
+  height: 24px;
+}
+
 .searchButton {
   font-family: 'Open Sans', sans-serif;
   width: 170px;
