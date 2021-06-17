@@ -5,7 +5,6 @@
     <nav>
         <ul>
           <% if user_signed_in? %>
-            
             <div class="top2">
               <div class="top2b">
                 <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
@@ -23,7 +22,6 @@
               <div class="bar2"></div>
               <div class="bar3"></div>
             </div>
-      
             <div id="menu2" onclick="hide2()">
               <ul>
                 <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
@@ -36,9 +34,7 @@
                 <li><%= link_to("Plan a meetup", meetups_path) %></li>
               </ul>
             </div>
-
-
-               <% end %>
+          <% end %>
         </ul>
     </nav>
   </div>
