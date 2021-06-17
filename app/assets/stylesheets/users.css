@@ -3,7 +3,12 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/ */
 .profile-background {
   min-height: 100vh;
+  background-image: url('dimmer_fun.jpg');
+  min-height: 900px;
+  width: 100%;
 }
+
+
 
 .profile-body {
   flex-direction: column;
@@ -26,7 +31,7 @@
   margin-left: 35px;
   margin-bottom: 60px;
   margin-top: 20px;
-} 
+}
 
 .user-endorsements-container {
   font-family: 'Open Sans', sans-serif;
