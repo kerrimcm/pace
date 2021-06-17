@@ -1,10 +1,9 @@
 .background {
-  background-image: url('dimmer_fun.jpg');
+  /* background-image: url('dimmer_fun.jpg');*/
   min-height: 900px;
   width: 100%;
-  /* opacity: 0.6; */
-  /* background: rgb(126,12,12);
-  background: linear-gradient(90deg, rgba(126,12,12,1) 0%, rgba(255,219,219,1) 72%); */
+  background: rgb(255,230,230);
+  background: linear-gradient(0deg, rgba(255,230,230,1) 47%, rgba(255,255,255,1) 94%);
 }
 
 .landing_page_background {

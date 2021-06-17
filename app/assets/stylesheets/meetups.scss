@@ -1,7 +1,10 @@
 // Place all the styles related to the Meetups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+.background {
+  background: rgb(255,230,230);
+  background: linear-gradient(0deg, rgba(255,230,230,1) 47%, rgba(255,255,255,1) 94%);
+}
 body{
   justify-content: center;
 }
