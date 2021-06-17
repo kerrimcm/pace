@@ -185,27 +185,27 @@ nav a {
   color:white;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1700px) {
   .pace-logo {margin-left: 8%;}
   .top2b {margin-left: 8%;}
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1550px) {
   .pace-logo {margin-left: 6.5%;}
   .top2b {margin-left: 6.5%;}
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1385px) {
   .pace-logo {margin-left: 5%;}
   .top2b {margin-left: 5%;}
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 1260px) {
   .pace-logo {margin-left: 4%;}
   .top2b {margin-left: 4%;}
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1170px) {
   .pace-logo {margin-left: 3%;}
   .top2b {margin-left: 3%;}
 }
