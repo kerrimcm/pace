@@ -1,51 +1,51 @@
-<div class="background">
-  <%= stylesheet_link_tag "home_page", :media => "screen" %>
 
-  <!-- <div class="main-body"> -->
-
-    <% if user_signed_in? %>
-      <div class="wrap">
-        <%= form_tag("/users", method: 'get', class:'search') do %>
-        <%= text_field_tag :q %>
-        <%= submit_tag("Find your running partner", class: "searchButton") %>
-     <% end %>
-      </div>
-      <% @users.each do |user| %>
-        <div class="user-container">
-          <% if user.profile_pic.attached? %>
-            <% image = user.profile_pic %>
-          <% else %>
-            <% image = 'default.jpg' %>
-          <% end %>
-          <%= image_tag(image, class: "profile_pic") %>
-          <div class ="user-details">
-            <p><strong> Name: </strong> <%= user.first_name %></p>
-            <p><strong> Area:</strong> <%= user.postcode %></p>
-            <p><strong> Gender: </strong> <%= user.gender %></p>
-            <p><strong> Ability: </strong> <%= user.ability %></p>
-            <p><strong> Goals: </strong> <%= user.goals %></p>
+<body>
+    <%= stylesheet_link_tag "home_page", :media => "screen" %>
+      <% if user_signed_in? %>
+        <div class="background">
+          <div class="wrap">
+            <%= form_tag("/users", method: 'get', class:'search') do %>
+            <%= text_field_tag :q %>
+            <%= submit_tag("Find your running partner", class: "searchButton") %>
+         <% end %>
           </div>
+          <% @users.each do |user| %>
+            <div class="user-container">
+              <% if user.profile_pic.attached? %>
+                <% image = user.profile_pic %>
+              <% else %>
+                <% image = 'default.jpg' %>
+              <% end %>
+              <%= image_tag(image, class: "profile_pic") %>
+              <div class ="user-details">
+                <p><strong> Name: </strong> <%= user.first_name %></p>
+                <p><strong> Area:</strong> <%= user.postcode %></p>
+                <p><strong> Gender: </strong> <%= user.gender %></p>
+                <p><strong> Ability: </strong> <%= user.ability %></p>
+                <p><strong> Goals: </strong> <%= user.goals %></p>
+              </div>
 
-          <% if user == current_user %>
-            <%= button_to "View Your Profile", user %>
-          <% else %>
-            <%= button_to "View #{user.first_name}'s Profile", user %>
+              <% if user == current_user %>
+                <%= button_to "View Your Profile", user %>
+              <% else %>
+                <%= button_to "View #{user.first_name}'s Profile", user %>
+              <% end %>
+            </div>
           <% end %>
         </div>
-      <% end %>
-    <% else %>
-      <div class="landing_page_content">
-        <%= image_tag "clear_logo.png", class: "landing_page_logo"%>
-        <span class='button_loggedout'>
-          <%= link_to "Login", new_user_session_path %>
-        </span>
-        </br>
-        <span class='button_loggedout'>
-          <%= link_to "Sign up", new_user_registration_path %>
-        </span>
+      <% else %>
+      <div class="landing_page_background">
+        <div class="landing_page_content">
+          <%= image_tag "clear_logo.png", class: "landing_page_logo"%>
+          <span class='button_loggedout'>
+            <%= link_to "Login", new_user_session_path %>
+          </span>
+          </br>
+          <span class='button_loggedout'>
+            <%= link_to "Sign up", new_user_registration_path %>
+          </span>
+        </div>
       </div>
-    <% end %>
 
-  <!-- </div> -->
-
-</div>
+      <% end %>
+</body>
