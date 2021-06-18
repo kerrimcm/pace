@@ -1,9 +1,7 @@
 .background {
-  /* background-image: url('dimmer_fun.jpg');*/
+  background-image: url('fun_light.jpg');
   min-height: 900px;
   width: 100%;
-  background: rgb(255,230,230);
-  background: linear-gradient(0deg, rgba(255,230,230,1) 47%, rgba(255,255,255,1) 94%);
 }
 
 .landing_page_background {
