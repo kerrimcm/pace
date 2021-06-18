@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/ */
 
+.profile-background {
+
+}
+
 .profile-body {
   flex-direction: column;
   display: grid;
@@ -88,4 +92,3 @@
   left: 30%;
   margin-top: 40px
 }
-

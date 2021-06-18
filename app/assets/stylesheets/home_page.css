@@ -1,10 +1,9 @@
 .background {
-  background-image: url('dimmer_fun.jpg');
-  min-height: 800px;
+  /* background-image: url('dimmer_fun.jpg');*/
+  min-height: 900px;
   width: 100%;
-  /* opacity: 0.6; */
-  /* background: rgb(126,12,12);
-  background: linear-gradient(90deg, rgba(126,12,12,1) 0%, rgba(255,219,219,1) 72%); */
+  background: rgb(255,230,230);
+  background: linear-gradient(0deg, rgba(255,230,230,1) 47%, rgba(255,255,255,1) 94%);
 }
 
 .landing_page_background {
@@ -102,19 +101,29 @@
 	top:1px;
 }
 
-input[type="text" i] {
-  width: 40%;
-  height: 24px;
+input{
+  width: 90%;
   border-color: rgb(179, 177, 177);
-  border-width: 1px;
-  margin-left: 48px;
-  margin-top: 10px;
+  height: 24px;
 }
 
-input[type="text" i]:focus {
+
+input:focus {
   outline: none;
   border-color: rgb(250, 132, 132);
   box-shadow: 0 0 10px rgb(248, 199, 199);
+}
+
+input#user_profile_pic{
+  width: 95%;
+}
+
+select{
+  width: 90%;
+  border-color: rgb(179, 177, 177);
+  height: 28px;
+  border-style: inset;
+  border-width: 2px;
 }
 
 .searchButton {

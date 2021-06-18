@@ -1,17 +1,25 @@
 label{
   display: table-cell;
-  text-align: right;
-  padding: 10px;
+  text-align: center;
+  padding: 5px;
   padding-right: 20px;
   font-family: 'Open Sans', sans-serif;
 }
 
+.actions_centered{
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
 div.field{
   display:table-row;
+  margin: 3px;
 }
+
 
 div.actions{
   display:table-row;
+  margin: 3px;
 }
 
 .form-body {
@@ -23,15 +31,25 @@ div.actions{
   justify-content: center;
 }
 
+.login-form-body {
+  /* width: 20%; */
+  opacity: 0.6;
+  margin: 15%;
+
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+}
+
 /* this is LOGIN and SIGN UP */
 form.new_user{
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 10%;
   margin-bottom: 10%;
   justify-content: center;
   align-items: center;
-  padding: 1%;
+  padding: 4%;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -43,8 +61,22 @@ form.edit_user{
   margin-bottom: 10%;
   justify-content: center;
   align-items: center;
-  padding: 2%;
+  padding: 3%;
   background-color: rgba(255, 255, 255, 0.7);
+}
+
+.form_button {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgb(250, 132, 132);
+  border: none;
+  color: white;
+  padding: 6px 6px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 h3{
