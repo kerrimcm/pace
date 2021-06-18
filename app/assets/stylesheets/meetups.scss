@@ -1,10 +1,11 @@
 // Place all the styles related to the Meetups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
 .background {
-  background: rgb(255,230,230);
-  background: linear-gradient(0deg, rgba(255,230,230,1) 47%, rgba(255,255,255,1) 94%);
+
 }
+
 body{
   justify-content: center;
 }
@@ -15,7 +16,6 @@ h1 {
   font-size: 30px;
   padding: 2% 3%;
   text-align: center;
-  // text-transform: uppercase;
 }
 
 p {
@@ -23,7 +23,6 @@ p {
   color: #111;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 15px;
-  // text-transform: uppercase;
 }
 
 .instructions{
@@ -47,12 +46,14 @@ p {
 
 #meetup_name {
   text-align: center;
+  justify-content: center;
+  width: 200px;
+  margin-right: 60px;
 }
 
-.map-holder{
+.map-holder {
   min-width: 350px;
   justify-content: center;
-
 }
 
 #map {
@@ -71,6 +72,22 @@ p {
   border: none;
   cursor: pointer;
   margin-bottom: 20px;
-  margin-left: 10px;
+  margin-right: 10px;
   padding: 6px 6px;
+}
+
+.location {
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  padding: 5% 7%;
+  text-align: center;
+}
+
+.meetup {
+  text-align: center;
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 15px;
+  margin-bottom: 5%;
 }

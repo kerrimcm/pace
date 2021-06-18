@@ -5,10 +5,10 @@
           <div class="wrap">
           <br>
           <br>
-            <%= form_tag("/users", method: 'get', class:'search') do %>
-              <%= submit_tag("Find your running partner", class: "searchButton") %>
-              <%= text_field_tag :q %>
-            <% end %>
+          <%= form_tag("/users", method: 'get') do %>
+             <%= text_field_tag :q, "", class: 'search_box', placeholder: "Find buddy" %>
+             <%= submit_tag"🔍", class: "magnifying_glass" %>
+          <% end %>
           </div>
           <% @users.each do |user| %>
             <div class="user-container">
@@ -37,7 +37,8 @@
       <% else %>
       <div class="landing_page_background">
         <div class="landing_page_content">
-          <%= image_tag "clear_logo.png", class: "landing_page_logo"%>
+          <%= image_tag "pace-landing-logo.png", class: "landing_page_logo"%>
+          <div class="slogan"> <p> Feel safer, train harder </p> </div>
           <span class='button_loggedout'>
             <%= link_to "Login", new_user_session_path %>
           </span>
@@ -47,6 +48,5 @@
           </span>
         </div>
       </div>
-
-      <% end %>
+    <% end %>
 </body>
