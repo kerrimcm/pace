@@ -14,6 +14,12 @@
  *= require_self
  */
 
+ body {
+  margin-top: -11px;
+  margin-left: 1px;
+  margin-right: 1px; 
+}
+
 .ex4 .parent {
   display: grid;
   grid-template-rows: auto 1fr auto;
