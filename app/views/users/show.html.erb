@@ -1,56 +1,60 @@
 <%= stylesheet_link_tag "users", :media => "screen" %>
-<div class="profile-background">
-  <div class="profile-body">
-    <div class="user-container-profile">
-      <% if @reported %>
-        <p> You have reported this user! Our admin team is looking into this. </p>
-      <% end %>
 
-      <% if @user.profile_pic.attached? %>
-        <% image = @user.profile_pic %>
-      <% else %>
-        <% image = 'default.jpg' %>
-      <% end %>
-      <%= image_tag(image, class: "profile_pic") %> <br />
+<div class="profile-body">
+  <div class="user-container-profile">
+    <% if @reported %>
+      <p> You have reported this user! Our admin team is looking into this. </p>
+    <% end %>
 
-      <p><strong> Name: </strong> <%= @user.first_name %></p>
-      <p><strong> Area:</strong> <%= @user.postcode %></p>
-      <p><strong> Gender: </strong> <%= @user.gender %></p>
-      <p><strong> Ability: </strong> <%= @user.ability %></p>
-      <p><strong> Goals: </strong> <%= @user.goals %></p>
+    <% if @user.profile_pic.attached? %>
+      <% image = @user.profile_pic %>
+    <% else %>
+      <% image = 'default.jpg' %>
+    <% end %>
+    <%= image_tag(image, class: "profile_pic") %> <br />
 
-      <br>
-      <% if current_user.id == @user.id %>
-        <p><%= @user.email %></p>
-        <%= link_to "Edit", edit_user_registration_path %>
-      <% else %>
-        <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%> <br />
+    <p><strong> Name: </strong> <%= @user.first_name %></p>
+    <p><strong> Area:</strong> <%= @user.postcode %></p>
+    <p><strong> Gender: </strong> <%= @user.gender %></p>
+    <p><strong> Ability: </strong> <%= @user.ability %></p>
+    <p><strong> Goals: </strong> <%= @user.goals %></p>
+
+    <br>
+    <% if current_user.id == @user.id %>
+      <p><%= @user.email %></p>
+      <%= link_to "Edit", edit_user_registration_path %>
+    <% else %>
+      <div class="message_user_bubble"> 
+        <%= link_to "Message this user", conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: "post"%>
+      </div>
+
+      <div class="report_user_bubble">
         <%= link_to "Report this user", new_user_report_path(user_id: @user.id) %>
-        <%= render 'form', endorsement: @endorsement %>
+      </div>
+      <%= render 'form', endorsement: @endorsement %>
+    <% end %>
+    </div> 
+    <% if current_user.id != @user.id %>
+      <% if !@user_endorsements.empty? %>
+      <div class="user-endorsements-container">
+      <% unless @endorsement_counter == 0 %>
+        Endorsed by 👍 <%= @endorsement_counter %>
       <% end %>
-      </div> 
-      <% if current_user.id != @user.id %>
-        <% if !@user_endorsements.empty? %>
-        <div class="user-endorsements-container">
-        <% unless @endorsement_counter == 0 %>
-          Endorsed by 👍 <%= @endorsement_counter %>
-        <% end %>
+      <br>
+      <% @user_endorsements.each do |endorsement| %>
+        <% user_name = '' %>
+      <% @users.each do |user| %>
+        <% user_name = user.first_name if user.id == endorsement[:user_id] %> 
+      <% end %>
+      <br>
+        <% if endorsement[:message] == '' %>
+          <i><%= user_name %></i>
         <br>
-        <% @user_endorsements.each do |endorsement| %>
-          <% user_name = '' %>
-        <% @users.each do |user| %>
-          <% user_name = user.first_name if user.id == endorsement[:user_id] %> 
-        <% end %>
+        <% else %>
+          <i><%= user_name %></i> 🗣 <%= endorsement[:message] %> 
         <br>
-          <% if endorsement[:message] == '' %>
-            <i><%= user_name %></i>
-          <br>
-          <% else %>
-            <i><%= user_name %></i> 🗣 <%= endorsement[:message] %> 
-          <br>
-          <% end %>
         <% end %>
       <% end %>
     <% end %>
-    </div>
-  </div>
+  <% end %>
+</div>
