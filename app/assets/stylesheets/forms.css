@@ -21,6 +21,44 @@ div.actions{
   margin: 3px;
 }
 
+input#user_first_name{
+  height: 20px;
+  margin-left: 5px;
+}
+
+input#user_postcode{
+  height: 20px;
+  margin-left: 5px;
+}
+
+input#user_dob{
+  height: 24px;
+  margin-left: 5px;
+}
+
+input#user_email{
+  height: 20px;
+  margin-left: 5px;
+}
+
+input#user_password{
+  height: 20px;
+  margin-left: 5px;
+}
+
+input#user_password_confirmation{
+  height: 20px;
+  margin-left: 7px;
+}
+
+
+
+input#user_current_password{
+  height: 20px;
+  margin-left: 7px;
+  align-self: left;
+}
+
 .form-body {
   /* width: 20%; */
   opacity: 0.6;
