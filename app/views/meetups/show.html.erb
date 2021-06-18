@@ -1,9 +1,13 @@
-<%= stylesheet_link_tag "meetups", :media => "all" %>
 <p>
+  <div class="location">
   <strong>Location description</strong> <br />
-  <%= @meetup.name %>
+  </div>
+  <div class="meetup">
+    <%= @meetup.name %>
+  </div>
   <h1 id="current_lat" visibility: hidden > <%= @current_meetup.latitude %> </h1>
   <h1 id="current_lng" visibility: hidden > <%= @current_meetup.longitude %> </h1>
+
 </p>
 
 <head>
@@ -18,10 +22,8 @@
     type="text"
     placeholder="Search Box"
   />
-  <div style='width: 800px;'>
-    <div id="map" style='width: 800px; height: 400px;'>
+    <div id="map" style='width: 800px; height: 400px; justify-content: center;'>
       <%= javascript_pack_tag 'staticMeetupMap' %>
     </div>
-  </div>
   <%= javascript_include_tag "//maps.googleapis.com/maps/api/js?key=#{@api_key}&callback=window.initAutocomplete&libraries=places&v=weekly" %>
 </body>
