@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/ */
 
-.profile-background {
-
-}
-
 .profile-body {
   flex-direction: column;
   display: grid;
@@ -28,9 +24,9 @@
 #endorsement_body {
   margin-top: 100px;
   margin-bottom: 10px;
-  width: 200px;
-  margin-right: 30px;
-  padding-left: 10px;
+  width: 250px;
+  height:30px;
+  padding-left: 20px;
   border-radius: 0.3em
 }
 
@@ -59,8 +55,8 @@
 .thumbs-up {
   background: none;
   border: none;
-  /* min-width: 50px;
-  min-height: 50px; */
+  min-width: 50px;
+  min-height: 50px;
   font-size: 30px;
 }
 
@@ -79,7 +75,6 @@
   position: absolute;
   left: 30%
 }
-
 
 .report_user_bubble {
   font-family: 'Open Sans', sans-serif;

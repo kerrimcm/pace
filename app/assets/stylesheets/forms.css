@@ -16,7 +16,6 @@ div.field{
   margin: 3px;
 }
 
-
 div.actions{
   display:table-row;
   margin: 3px;
@@ -65,7 +64,7 @@ form.edit_user{
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.form_button {
+.form_button input {
   font-family: 'Open Sans', sans-serif;
   background-color: rgb(250, 132, 132);
   border: none;

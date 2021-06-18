@@ -6,7 +6,7 @@
           <br>
           <br>
           <%= form_tag("/users", method: 'get') do %>
-             <%= text_field_tag :q, "", class: 'search_box', placeholder: "Find buddy" %>
+             <%= text_field_tag :q, "", class: 'search_box', placeholder: "Find running buddy" %>
              <%= submit_tag"🔍", class: "magnifying_glass" %>
           <% end %>
           </div>
@@ -49,4 +49,5 @@
         </div>
       </div>
     <% end %>
+    <br>
 </body>
