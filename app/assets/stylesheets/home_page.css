@@ -151,12 +151,11 @@ select{
 .wrap {
   margin-left: auto;
   margin-right: auto;
-  width: 31em
+  width: 8em
 }
 
 .search_box {
   text-align: center;
-  border: none;
   border-radius: 50px;
  font-size: 13px;
 }
