@@ -165,13 +165,13 @@ input[type="text" i]:focus {
   margin-bottom: 20px;
   margin-left: 10px;
 }
-.loop {
+.magnifying_glass {
   background: none;
   border: none;
   font-size: 22px;
 }
 
-.loop:hover{
+.magnifying_glass:hover {
   transform: scale(1.2);
   transition: 0.5s;
 }

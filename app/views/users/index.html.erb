@@ -6,8 +6,8 @@
           <br>
           <br>
           <%= form_tag("/users", method: 'get') do %>
-             <%= text_field_tag :q, "", class: 'search_box', placeholder: "Find your running partner" %>
-             <%= submit_tag"🔍", class: "loop" %>
+             <%= text_field_tag :q, "", class: 'search_box', placeholder: "Find buddy" %>
+             <%= submit_tag"🔍", class: "magnifying_glass" %>
           <% end %>
           </div>
           <% @users.each do |user| %>
