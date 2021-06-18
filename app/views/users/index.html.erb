@@ -5,10 +5,10 @@
           <div class="wrap">
           <br>
           <br>
-            <%= form_tag("/users", method: 'get', class:'search') do %>
-              <%= submit_tag("Find your running partner", class: "searchButton") %>
-              <%= text_field_tag :q %>
-            <% end %>
+          <%= form_tag("/users", method: 'get') do %>
+             <%= text_field_tag :q, "", class: 'search_box', placeholder: "Find buddy" %>
+             <%= submit_tag"🔍", class: "magnifying_glass" %>
+          <% end %>
           </div>
           <% @users.each do |user| %>
             <div class="user-container">
