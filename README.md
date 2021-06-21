@@ -1,24 +1,6 @@
-# README
+# Pace
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A running app built in Rails, designed to help runners feel safer and train harder.
 
-Things you may want to cover:
+<img src="app/assets/images/pace-logo.png" width="100" height="100">
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
