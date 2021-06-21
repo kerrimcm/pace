@@ -21,32 +21,32 @@ Originally inspired by the idea of bringing people together via thier common int
 
 <details>
   <summary>Landing</summary>
-<img src="app/assets/images/landing">
+<img src="app/assets/images/landing.png">
 </details>
 
 <details>
   <summary>Home page</summary>
-<img src="app/assets/images/home-page">
+<img src="app/assets/images/home-page.png">
 </details>
 
 <details>
   <summary>User profile</summary>
-<img src="app/assets/images/user-profile">
+<img src="app/assets/images/user-profile.png">
 </details>
 
 <details>
   <summary>Navbar</summary>
-<img src="app/assets/images/navbar">
+<img src="app/assets/images/navbar.png">
 </details>
 
 <details>
   <summary>Messaging</summary>
-<img src="app/assets/images/messaging">
+<img src="app/assets/images/messaging.png">
 </details>
 
 <details>
   <summary>Maps</summary>
-![map demo](app/assets/images/maps.gif)
+<img src="app/assets/images/maps.gif">
 </details>
 
 ## Features
