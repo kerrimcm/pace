@@ -17,6 +17,38 @@ Originally inspired by the idea of bringing people together via thier common int
 * To check tests passing run `rspec`
 * Finally, to view the site, run `rails server`
 
+## Screenshots
+
+<details>
+  <summary>Landing</summary>
+<img src="app/assets/images/landing">
+</details>
+
+<details>
+  <summary>Home page</summary>
+<img src="app/assets/images/home-page">
+</details>
+
+<details>
+  <summary>User profile</summary>
+<img src="app/assets/images/user-profile">
+</details>
+
+<details>
+  <summary>Navbar</summary>
+<img src="app/assets/images/navbar">
+</details>
+
+<details>
+  <summary>Messaging</summary>
+<img src="app/assets/images/messaging">
+</details>
+
+<details>
+  <summary>Maps</summary>
+![map demo](app/assets/images/maps.gif)
+</details>
+
 ## Features
 
 * User sign up/log in/log out
