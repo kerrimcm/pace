@@ -6,7 +6,8 @@ feature "User can search for other users" do
     first(:link, "Logout").click
     sign_up_mark
 
-    fill_in "q", with: "Jane\n"
+    fill_in "q", with: "Jane"
+    click_button("🔍")
     expect(page).not_to have_content "Mark"
   end
   
@@ -14,7 +15,9 @@ feature "User can search for other users" do
     sign_up_jane
     first(:link, "Logout").click
     sign_up_mark
-    fill_in "q", with: "Marathon\n"
+  
+    fill_in "q", with: "Marathon"
+    click_button("🔍")
     expect(page).not_to have_content "Couch"
   end
 end
