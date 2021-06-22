@@ -2,7 +2,7 @@
 
 A running app built in Rails, designed to help runners feel safer and train harder.
 
-Originally inspired by the idea of bringing people together via thier common interests, namely exercise, we stretched the idea further to address the social issue of women's safety when running. The app is inclusive of all people, but offers a medium through which people can meet up safely and securely. Where they can find a partner to hold them accountable to their fitness goals and provide them with safety along the way. 
+Originally inspired by the idea of bringing people together via their common interests, namely exercise, we stretched the idea further to address the social issue of women's safety when running. The app is inclusive of all people, but offers a medium through which people can meet up safely and securely. Where they can find a partner to hold them accountable to their fitness goals and provide them with safety along the way. 
 
 <img src="app/assets/images/pace-logo.png" width="150" height="150">
 
@@ -21,32 +21,32 @@ Originally inspired by the idea of bringing people together via thier common int
 
 <details>
   <summary>Landing</summary>
-<img src="app/assets/images/landing">
+<img src="app/assets/images/landing.png">
 </details>
 
 <details>
   <summary>Home page</summary>
-<img src="app/assets/images/home-page">
+<img src="app/assets/images/home-page.png">
 </details>
 
 <details>
   <summary>User profile</summary>
-<img src="app/assets/images/user-profile">
+<img src="app/assets/images/user-profile.png">
 </details>
 
 <details>
   <summary>Navbar</summary>
-<img src="app/assets/images/navbar">
+<img src="app/assets/images/navbar.png">
 </details>
 
 <details>
   <summary>Messaging</summary>
-<img src="app/assets/images/messaging">
+<img src="app/assets/images/messaging.png">
 </details>
 
 <details>
   <summary>Maps</summary>
-![map demo](app/assets/images/maps.gif)
+<img src="app/assets/images/maps.gif">
 </details>
 
 ## Features
