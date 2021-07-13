@@ -62,7 +62,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :production, :development, :test do
-  gem 'pg', '1.2.3'
+  gem 'pg'
 end
 
 group :development, :test do

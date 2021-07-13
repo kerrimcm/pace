@@ -178,7 +178,8 @@ select{
   background: none;
   border: none;
   font-size: 22px;
-  margin-left: 20px;
+  margin-left: 150px;
+  justify-content: center;
 }
 
 .magnifying_glass:hover {
